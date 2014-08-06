@@ -774,7 +774,7 @@ public class EventHandler
 			WorldServer world = (WorldServer)event.world;
 	    	try
 	    	{
-	    		File file = new File(world.getChunkSaveLocation(), "morph.dat");
+	    		File file = new File(world.getChunkSaveLocation(), "morph.dat"); ///TODO Chnage to a player tag based system!
 	    		if(!file.exists())
 	    		{
 	    			Morph.proxy.tickHandlerServer.saveData = new NBTTagCompound();
@@ -785,7 +785,7 @@ public class EventHandler
 	    		}
 	    		else
 	    		{
-	    			Morph.proxy.tickHandlerServer.saveData = CompressedStreamTools.readCompressed(new FileInputStream(file));
+	    			Morph.proxy.tickHandlerServer.saveData = CompressedStreamTools.readCompressed(new FileInputStream(file));//TODO this is the root
 	    		}
 	    	}
 	    	catch(EOFException e)

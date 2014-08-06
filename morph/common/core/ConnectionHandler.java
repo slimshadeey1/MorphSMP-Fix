@@ -87,7 +87,7 @@ public class ConnectionHandler
 		
 		if(Morph.proxy.tickHandlerServer.saveData != null)
 		{
-			NBTTagCompound tag = Morph.proxy.tickHandlerServer.saveData;
+			NBTTagCompound tag = Morph.proxy.tickHandlerServer.saveData;///TODO Here we have the morph save and load
 			
 			MorphHandler.addOrGetMorphState(list, new MorphState(player.worldObj, player.username, player.username, null, player.worldObj.isRemote));
 			

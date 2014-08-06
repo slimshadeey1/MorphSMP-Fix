@@ -305,7 +305,7 @@ public class Morph
 		}
 	}
 	
-    public static NBTTagCompound readNBTTagCompound(DataInput par0DataInput) throws IOException
+    public static NBTTagCompound readNBTTagCompound(DataInput par0DataInput) throws IOException //TODO This could be set to use my class instead
     {
         short short1 = par0DataInput.readShort();
 
@@ -321,7 +321,7 @@ public class Morph
         }
     }
 
-    public static void writeNBTTagCompound(NBTTagCompound par0NBTTagCompound, DataOutput par1DataOutput) throws IOException
+    public static void writeNBTTagCompound(NBTTagCompound par0NBTTagCompound, DataOutput par1DataOutput) throws IOException //TODO This could be set to use my class instead
     {
         if (par0NBTTagCompound == null)
         {
