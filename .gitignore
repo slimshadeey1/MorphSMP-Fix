@@ -12,6 +12,12 @@ net/
 paulscode/
 assets/forge/
 
+gradle/
+eclipse/
+Etc/
+.gradle/
+build/
+
 # MC/Forge files #
 deobfuscation_data-*.lzma
 fml_at.cfg
