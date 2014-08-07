@@ -360,7 +360,6 @@ public class TickHandlerServer
 
 	public int lastIndex;
 	
-	public NBTTagCompound saveData;
 
 	public HashMap<String, MorphInfo> playerMorphInfo = new HashMap<String, MorphInfo>();
 	public HashMap<String, ArrayList<MorphState>> playerMorphs = new HashMap<String, ArrayList<MorphState>>();

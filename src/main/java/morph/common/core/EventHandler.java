@@ -739,9 +739,8 @@ public class EventHandler
 					event.entityLiving.setDead();
 				}
 			}
-			if(event.entityLiving instanceof EntityWither && !Morph.proxy.tickHandlerServer.saveData.getBoolean("killedWither"))//Only here because it is GLOBAL
+			if(event.entityLiving instanceof EntityWither)//Only here because it is GLOBAL
 			{
-				Morph.proxy.tickHandlerServer.saveData.setBoolean("killedWither", true);
 				if(Morph.disableEarlyGameFlight == 2)
 				{
 					SessionState.allowFlight = true;

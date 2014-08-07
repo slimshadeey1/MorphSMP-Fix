@@ -355,6 +355,7 @@
         </SOURCES>
       </library>
     </orderEntry>
+    <orderEntry type="library" name="cauldron-1.6.4-1.965.21.144-server" level="project" />
   </component>
 </module>
 

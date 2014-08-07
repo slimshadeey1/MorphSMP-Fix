@@ -239,7 +239,6 @@ public class Morph
         SlimsMain.onServerDisable();
 		proxy.tickHandlerServer.playerMorphInfo.clear();
 		proxy.tickHandlerServer.playerMorphs.clear();
-		proxy.tickHandlerServer.saveData = null;
 	}
 	
 	public static void saveConfig()

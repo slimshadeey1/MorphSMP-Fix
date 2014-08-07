@@ -196,5 +196,14 @@
     <mapping directory="" vcs="" />
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
   </component>
+  <component name="libraryTable">
+    <library name="cauldron-1.6.4-1.965.21.144-server">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/cauldron-1.6.4-1.965.21.144-server.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+  </component>
 </project>
 

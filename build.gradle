@@ -1,5 +1,6 @@
 buildscript {
     repositories {
+        mavenLocal()
         mavenCentral()
         maven {
             name = "forge"
@@ -7,11 +8,15 @@ buildscript {
         }
     }
     dependencies {
+        classpath 'net.minecraftforge.gradle:cauldron'
         classpath 'net.minecraftforge.gradle:ForgeGradle:1.0-SNAPSHOT'
+
     }
 }
 
+
 apply plugin: 'forge'
+
 
 version = "0.7.1"
 group= "morph" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
@@ -19,6 +24,10 @@ archivesBaseName = "morph"
 
 minecraft {
 	version = "1.6.4-9.11.1.964"
+
+}
+minecraft{
+    net.minecraftforge.cauldron
 }
 processResources
 {
