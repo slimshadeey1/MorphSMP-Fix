@@ -8,10 +8,12 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Map.Entry;
 
+import cpw.mods.fml.common.*;
 import morph.api.Ability;
 import morph.client.morph.MorphInfoClient;
 import morph.common.Morph;
 import morph.common.ability.AbilityHandler;
+import morph.common.core.SlimsFix.*;
 import morph.common.morph.MorphHandler;
 import morph.common.morph.MorphInfo;
 import morph.common.morph.MorphState;
@@ -41,7 +43,7 @@ import net.minecraftforge.client.event.RenderPlayerEvent;
 import net.minecraftforge.client.event.sound.SoundLoadEvent;
 import net.minecraftforge.event.EventPriority;
 import net.minecraftforge.event.ForgeSubscribe;
-import net.minecraftforge.event.entity.PlaySoundAtEntityEvent;
+import net.minecraftforge.event.entity.*;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.entity.living.LivingSetAttackTargetEvent;
 import net.minecraftforge.event.entity.player.EntityInteractEvent;
@@ -50,8 +52,6 @@ import net.minecraftforge.event.world.WorldEvent;
 
 import org.lwjgl.opengl.GL11;
 
-import cpw.mods.fml.common.FMLCommonHandler;
-import cpw.mods.fml.common.ObfuscationReflectionHelper;
 import cpw.mods.fml.common.network.PacketDispatcher;
 import cpw.mods.fml.relauncher.ReflectionHelper;
 import cpw.mods.fml.relauncher.Side;
@@ -589,8 +589,14 @@ public class EventHandler
 			}
 		}
 	}
-	
-	@ForgeSubscribe
+
+    @ForgeSubscribe //Reloads there data
+    public void onEntityJoinWorld(EntityJoinWorldEvent event){
+        if(event.entity instanceof EntityPlayer && !event.entity.worldObj.isRemote){
+            SlimsMain.onRespawn((EntityPlayer)event.entity);
+        }
+    }
+    @ForgeSubscribe
 	public void onLivingSetAttackTarget(LivingSetAttackTargetEvent event)
 	{
 		if(Morph.hostileAbilityMode > 0 && FMLCommonHandler.instance().getEffectiveSide().isServer())
@@ -694,18 +700,19 @@ public class EventHandler
 			if(Morph.loseMorphsOnDeath >= 1 && event.entityLiving instanceof EntityPlayerMP)
 			{
 				EntityPlayerMP player = (EntityPlayerMP)event.entityLiving;
-				
-				MorphInfo info = Morph.proxy.tickHandlerServer.playerMorphInfo.get(player.username);
+
+                MorphInfo info = Morph.proxy.tickHandlerServer.playerMorphInfo.get(player.username);
 				
 				MorphState state = Morph.proxy.tickHandlerServer.getSelfState(player.worldObj, player.username);
 				
 				if(Morph.loseMorphsOnDeath == 1)
 				{
-					Morph.proxy.tickHandlerServer.playerMorphs.remove(player.username);
+                    SlimsMain.onDeathRemove(player);
+                    Morph.proxy.tickHandlerServer.playerMorphs.remove(player.username);
 				}
 				else if(info != null && info.nextState != state)
 				{
-					ArrayList<MorphState> states = Morph.proxy.tickHandlerServer.getPlayerMorphs(player.worldObj, player.username);
+                    ArrayList<MorphState> states = Morph.proxy.tickHandlerServer.getPlayerMorphs(player.worldObj, player.username);
 					states.remove(info.nextState);
 				}
 				
@@ -732,7 +739,7 @@ public class EventHandler
 					event.entityLiving.setDead();
 				}
 			}
-			if(event.entityLiving instanceof EntityWither && !Morph.proxy.tickHandlerServer.saveData.getBoolean("killedWither"))
+			if(event.entityLiving instanceof EntityWither && !Morph.proxy.tickHandlerServer.saveData.getBoolean("killedWither"))//Only here because it is GLOBAL
 			{
 				Morph.proxy.tickHandlerServer.saveData.setBoolean("killedWither", true);
 				if(Morph.disableEarlyGameFlight == 2)
@@ -769,134 +776,135 @@ public class EventHandler
 	@ForgeSubscribe
 	public void onWorldLoad(WorldEvent.Load event)
 	{
-		if(FMLCommonHandler.instance().getEffectiveSide().isServer() && event.world.provider.dimensionId == 0)
-		{
-			WorldServer world = (WorldServer)event.world;
-	    	try
-	    	{
-	    		File file = new File(world.getChunkSaveLocation(), "morph.dat"); ///TODO Chnage to a player tag based system!
-	    		if(!file.exists())
-	    		{
-	    			Morph.proxy.tickHandlerServer.saveData = new NBTTagCompound();
-	    			if(world.getWorldInfo().getWorldTotalTime() > 0)
-	    			{
-	    				Morph.console("Save data does not exist!", true);
-	    			}
-	    		}
-	    		else
-	    		{
-	    			Morph.proxy.tickHandlerServer.saveData = CompressedStreamTools.readCompressed(new FileInputStream(file));//TODO this is the root
-	    		}
-	    	}
-	    	catch(EOFException e)
-	    	{
-	    		Morph.console("Save data is corrupted! Attempting to read from backup.", true);
-	    		try
-	    		{
-		    		File file = new File(world.getChunkSaveLocation(), "morph_backup.dat");
-		    		if(!file.exists())
-		    		{
-		    			Morph.proxy.tickHandlerServer.saveData = new NBTTagCompound();
-		    			Morph.console("No backup detected!", true);
-		    		}
-		    		else
-		    		{
-			    		Morph.proxy.tickHandlerServer.saveData = CompressedStreamTools.readCompressed(new FileInputStream(file));
-	
-			    		File file1 = new File(world.getChunkSaveLocation(), "morph.dat");
-			    		file1.delete();
-			    		file.renameTo(file1);
-			    		Morph.console("Restoring data from backup.", false);
-		    		}
-	    		}
-	    		catch(Exception e1)
-	    		{
-	    			Morph.proxy.tickHandlerServer.saveData = new NBTTagCompound();
-	    			Morph.console("Even your backup data is corrupted. What have you been doing?!", true);
-	    		}
-	    	}
-	    	catch(IOException e)
-	    	{
-	    		Morph.proxy.tickHandlerServer.saveData = new NBTTagCompound();
-	    		Morph.console("Failed to read save data!", true);
-	    	}
-	    	
-			if(Morph.proxy.tickHandlerServer.saveData != null)
-			{
-				if(Morph.disableEarlyGameFlight == 1 && !Morph.proxy.tickHandlerServer.saveData.getBoolean("travelledToNether") || Morph.disableEarlyGameFlight == 2 && !Morph.proxy.tickHandlerServer.saveData.getBoolean("killedWither"))
-				{
-					SessionState.allowFlight = false;
-				}
-			}
-		}
+//		if(FMLCommonHandler.instance().getEffectiveSide().isServer() && event.world.provider.dimensionId == 0)
+//		{
+//			WorldServer world = (WorldServer)event.world;
+//	    	try
+//	    	{
+//	    		File file = new File(world.getChunkSaveLocation(), "morph.dat"); ///TODO Chnage to a player tag based system!
+//	    		if(!file.exists())
+//	    		{
+//	    			Morph.proxy.tickHandlerServer.saveData = new NBTTagCompound();
+//	    			if(world.getWorldInfo().getWorldTotalTime() > 0)
+//	    			{
+//	    				Morph.console("Save data does not exist!", true);
+//	    			}
+//	    		}
+//	    		else
+//	    		{
+//	    			Morph.proxy.tickHandlerServer.saveData = CompressedStreamTools.readCompressed(new FileInputStream(file));//TODO this is the root
+//	    		}
+//	    	}
+//	    	catch(EOFException e)
+//	    	{
+//	    		Morph.console("Save data is corrupted! Attempting to read from backup.", true);
+//	    		try
+//	    		{
+//		    		File file = new File(world.getChunkSaveLocation(), "morph_backup.dat");
+//		    		if(!file.exists())
+//		    		{
+//		    			Morph.proxy.tickHandlerServer.saveData = new NBTTagCompound();
+//		    			Morph.console("No backup detected!", true);
+//		    		}
+//		    		else
+//		    		{
+//			    		Morph.proxy.tickHandlerServer.saveData = CompressedStreamTools.readCompressed(new FileInputStream(file));
+//
+//			    		File file1 = new File(world.getChunkSaveLocation(), "morph.dat");
+//			    		file1.delete();
+//			    		file.renameTo(file1);
+//			    		Morph.console("Restoring data from backup.", false);
+//		    		}
+//	    		}
+//	    		catch(Exception e1)
+//	    		{
+//	    			Morph.proxy.tickHandlerServer.saveData = new NBTTagCompound();
+//	    			Morph.console("Even your backup data is corrupted. What have you been doing?!", true);
+//	    		}
+//	    	}
+//	    	catch(IOException e)
+//	    	{
+//	    		Morph.proxy.tickHandlerServer.saveData = new NBTTagCompound();
+//	    		Morph.console("Failed to read save data!", true);
+//	    	}
+//
+//			if(Morph.proxy.tickHandlerServer.saveData != null)
+//			{
+//				if(Morph.disableEarlyGameFlight == 1 && !Morph.proxy.tickHandlerServer.saveData.getBoolean("travelledToNether") || Morph.disableEarlyGameFlight == 2 && !Morph.proxy.tickHandlerServer.saveData.getBoolean("killedWither"))
+//				{
+//					SessionState.allowFlight = false;
+//				}
+//			}
+//		}
 	}
 
 	@ForgeSubscribe
 	public void onWorldSave(WorldEvent.Save event)
 	{
-		if(FMLCommonHandler.instance().getEffectiveSide().isServer() && event.world.provider.dimensionId == 0)
-		{
-			WorldServer world = (WorldServer)event.world;
-			if(Morph.proxy.tickHandlerServer.saveData == null)
-			{
-				Morph.proxy.tickHandlerServer.saveData = new NBTTagCompound();
-			}
-			
-            //write data
-            
-			NBTTagCompound tag = Morph.proxy.tickHandlerServer.saveData;
-
-            for(Entry<String, MorphInfo> e : Morph.proxy.tickHandlerServer.playerMorphInfo.entrySet())
-            {
-            	NBTTagCompound tag1 = new NBTTagCompound();
-            	e.getValue().writeNBT(tag1);
-            	tag.setCompoundTag(e.getKey() + "_morphData", tag1);
-            }
-            for(Entry<String, ArrayList<MorphState>> e : Morph.proxy.tickHandlerServer.playerMorphs.entrySet())
-            {
-            	String name = e.getKey();
-            	ArrayList<MorphState> states = e.getValue();
-            	tag.setInteger(name + "_morphStatesCount", states.size());
-            	for(int i = 0; i < states.size(); i++)
-            	{
-            		tag.setCompoundTag(name + "_morphState" + i, states.get(i).getTag());
-            	}
-            }
-            //end write data
-			
-            try
-            {
-            	if(world.getChunkSaveLocation().exists())
-            	{
-	                File file = new File(world.getChunkSaveLocation(), "morph.dat");
-	                if(file.exists())
-	                {
-	                	File file1 = new File(world.getChunkSaveLocation(), "morph_backup.dat");
-	                	if(file1.exists())
-	                	{
-	                		if(file1.delete())
-	                		{
-	                			file.renameTo(file1);
-	                		}
-	                		else
-	                		{
-	                			Morph.console("Failed to delete mod backup data!", true);
-	                		}
-	                	}
-	                	else
-	                	{
-	                		file.renameTo(file1);
-	                	}
-	                }
-	                
-	                CompressedStreamTools.writeCompressed(tag, new FileOutputStream(file));
-            	}
-            }
-            catch(IOException ioexception)
-            {
-                ioexception.printStackTrace();
-                throw new RuntimeException("Failed to save morph data");
-            }
-		}
+//		if(FMLCommonHandler.instance().getEffectiveSide().isServer() && event.world.provider.dimensionId == 0)
+//		{
+//			WorldServer world = (WorldServer)event.world;
+//			if(Morph.proxy.tickHandlerServer.saveData == null)
+//			{
+//				Morph.proxy.tickHandlerServer.saveData = new NBTTagCompound();
+//			}
+//
+//            //write data
+//
+//			NBTTagCompound tag = Morph.proxy.tickHandlerServer.saveData;
+//
+//            for(Entry<String, MorphInfo> e : Morph.proxy.tickHandlerServer.playerMorphInfo.entrySet())
+//            {
+//            	NBTTagCompound tag1 = new NBTTagCompound();
+//            	e.getValue().writeNBT(tag1);
+//            	tag.setCompoundTag(e.getKey() + "_morphData", tag1);
+//            }
+//            for(Entry<String, ArrayList<MorphState>> e : Morph.proxy.tickHandlerServer.playerMorphs.entrySet())
+//            {
+//            	String name = e.getKey();
+//            	ArrayList<MorphState> states = e.getValue();
+//            	tag.setInteger(name + "_morphStatesCount", states.size());
+//            	for(int i = 0; i < states.size(); i++)
+//            	{
+//            		tag.setCompoundTag(name + "_morphState" + i, states.get(i).getTag());
+//            	}
+//            }
+//            //end write data
+//
+//            try
+//            {
+//            	if(world.getChunkSaveLocation().exists())
+//            	{
+//	                File file = new File(world.getChunkSaveLocation(), "morph.dat");
+//	                if(file.exists())
+//	                {
+//	                	File file1 = new File(world.getChunkSaveLocation(), "morph_backup.dat");
+//	                	if(file1.exists())
+//	                	{
+//	                		if(file1.delete())
+//	                		{
+//	                			file.renameTo(file1);
+//	                		}
+//	                		else
+//	                		{
+//	                			Morph.console("Failed to delete mod backup data!", true);
+//	                		}
+//	                	}
+//	                	else
+//	                	{
+//	                		file.renameTo(file1);
+//	                	}
+//	                }
+//
+//	                CompressedStreamTools.writeCompressed(tag, new FileOutputStream(file));
+//            	}
+//            }
+//            catch(IOException ioexception)
+//            {
+//                ioexception.printStackTrace();
+//                throw new RuntimeException("Failed to save morph data");
+//            }
+//		}
+        SlimsMain.onWorldSave(); //For each player online there data from the map will be saved.
 	}
 }

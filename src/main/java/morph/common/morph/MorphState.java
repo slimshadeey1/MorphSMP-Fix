@@ -24,9 +24,8 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class MorphState 
 	implements Comparable
 {
-	public final int NBT_PROTOCOL = 1;
-	
-	public String playerName;
+    private static final int NBT_PROTOCOL = 2;
+    public String playerName;
 	public String playerMorph;
 	public boolean isFavourite;
 	public boolean isRemote;
@@ -58,11 +57,11 @@ public class MorphState
 			writeFakeTags(entInstance, fakeTag);
 			if(playerMorph.equalsIgnoreCase(""))
 			{
-				identifier = entInstance.getClass().toString() + entInstance.getEntityName() + parseTag(fakeTag);
+				//identifier = entInstance.getClass().toString() + entInstance.getEntityName() + parseTag(fakeTag);
 			}
 			else
 			{
-				identifier = "playerMorphState::player_" + playerMorph;
+				//identifier = "playerMorphState::player_" + playerMorph;
 			}
 		}
 	}
@@ -84,7 +83,7 @@ public class MorphState
 		
 		tag.setCompoundTag("entInstanceTag", tag1);
 		
-		tag.setString("identifier", identifier);
+		//tag.setString("identifier", identifier);
 		
 		return tag;
 	}
@@ -119,7 +118,7 @@ public class MorphState
 					//Assume updating from pre 0.7.0
 					tag1.setInteger("MorphNBTProtocolNumber", NBT_PROTOCOL);//changed everytime the identifier may change or requires a change.
 					identifier = entInstance.getClass().toString() + entInstance.getEntityName() + parseTag(tag1);
-					
+
 					tag1.setString("identifier", identifier);
 				}
 				if(tag1.getInteger("MorphNBTProtocolNumber") < NBT_PROTOCOL)
@@ -192,7 +191,6 @@ public class MorphState
 		}
 		tag.removeTag("bukkit");
 		tag.removeTag("InLove");
-		tag.setInteger("MorphNBTProtocolNumber", NBT_PROTOCOL);//changed everytime the identifier may change or requires a change.
 	}
 	
 	public static String parseTag(NBTTagCompound tag)

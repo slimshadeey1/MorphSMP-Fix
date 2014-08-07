@@ -81,7 +81,7 @@ public class MorphInfo
 			stream.writeBoolean(nextState != null);
 			if(nextState != null)
 			{
-				Morph.writeNBTTagCompound(nextState.getTag(), stream);
+				Morph.writeNBTTagCompound(nextState.getTag(), stream);//hmm
 			}
 			
 			stream.writeBoolean(flying);

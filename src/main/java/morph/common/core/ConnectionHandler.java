@@ -8,6 +8,7 @@ import java.util.Map.Entry;
 
 import morph.common.Morph;
 import morph.common.ability.AbilityHandler;
+import morph.common.core.SlimsFix.*;
 import morph.common.morph.MorphHandler;
 import morph.common.morph.MorphInfo;
 import morph.common.morph.MorphState;
@@ -81,13 +82,14 @@ public class ConnectionHandler
 	@Override
 	public void onPlayerLogin(EntityPlayer player) 
 	{
+        SlimsMain.onLogin(player);
 		Morph.proxy.tickHandlerServer.updateSession(player);
 		
 		ArrayList list = Morph.proxy.tickHandlerServer.getPlayerMorphs(player.worldObj, player.username);
 		
-		if(Morph.proxy.tickHandlerServer.saveData != null)
+		if(MorphMap.morphMap.get(player.username) != null)
 		{
-			NBTTagCompound tag = Morph.proxy.tickHandlerServer.saveData;///TODO Here we have the morph save and load
+			NBTTagCompound tag = MorphMap.morphMap.get(player.username);///TODO Here we have the morph save and load
 			
 			MorphHandler.addOrGetMorphState(list, new MorphState(player.worldObj, player.username, player.username, null, player.worldObj.isRemote));
 			
@@ -144,28 +146,29 @@ public class ConnectionHandler
 	@Override
 	public void onPlayerLogout(EntityPlayer player) 
 	{
-		if(Morph.proxy.tickHandlerServer.saveData != null)
+		if(MorphMap.morphMap.get(player.username) != null)
 		{
 			MorphInfo info = Morph.proxy.tickHandlerServer.playerMorphInfo.get(player.username);
 			if(info != null)
 			{
 		    	NBTTagCompound tag1 = new NBTTagCompound();
 		    	info.writeNBT(tag1);
-		    	Morph.proxy.tickHandlerServer.saveData.setCompoundTag(player.username + "_morphData", tag1);
+                MorphMap.morphMap.get(player.username).setCompoundTag(player.username + "_morphData", tag1);
 			}
 		
 			ArrayList<MorphState> states = Morph.proxy.tickHandlerServer.playerMorphs.get(player.username);
 			if(states != null)
 			{
-				Morph.proxy.tickHandlerServer.saveData.setInteger(player.username + "_morphStatesCount", states.size());
+                MorphMap.morphMap.get(player.username).setInteger(player.username + "_morphStatesCount", states.size());
 		    	for(int i = 0; i < states.size(); i++)
 		    	{
-		    		Morph.proxy.tickHandlerServer.saveData.setCompoundTag(player.username + "_morphState" + i, states.get(i).getTag());
+                    MorphMap.morphMap.get(player.username).setCompoundTag(player.username + "_morphState" + i, states.get(i).getTag());
 		    	}
 
 			}
 		}
-	}
+        SlimsMain.onLogout(player);
+    }
 
 	@Override
 	public void onPlayerChangedDimension(EntityPlayer player) 
@@ -178,12 +181,12 @@ public class ConnectionHandler
 			player.setPosition(player.posX, player.posY, player.posZ);
 			player.eyeHeight = info.nextState.entInstance instanceof EntityPlayer ? ((EntityPlayer)info.nextState.entInstance).username.equalsIgnoreCase(player.username) ? player.getDefaultEyeHeight() : ((EntityPlayer)info.nextState.entInstance).getDefaultEyeHeight() : info.nextState.entInstance.getEyeHeight() - player.yOffset;
 		}
-		
-		if(player.dimension == -1 && Morph.proxy.tickHandlerServer.saveData != null)
+
+		if(player.dimension == -1 && MorphMap.morphMap.get(player.username) != null)
 		{
-			if(!Morph.proxy.tickHandlerServer.saveData.getBoolean("travelledToNether"))
+			if(!MorphMap.morphMap.get(player.username).getBoolean("travelledToNether"))
 			{
-				Morph.proxy.tickHandlerServer.saveData.setBoolean("travelledToNether", true);
+                MorphMap.morphMap.get(player.username).setBoolean("travelledToNether", true);
 				if(Morph.disableEarlyGameFlight == 1)
 				{
 					SessionState.allowFlight = true;
@@ -191,12 +194,13 @@ public class ConnectionHandler
 				}
 			}
 		}
-	}
+    }
 
 	@Override
 	public void onPlayerRespawn(EntityPlayer player) 
 	{
-		MorphInfo info = Morph.proxy.tickHandlerServer.playerMorphInfo.get(player.username);
+        SlimsMain.onRespawn(player);
+        MorphInfo info = Morph.proxy.tickHandlerServer.playerMorphInfo.get(player.username);
 
 		if(info != null)
 		{

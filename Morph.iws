@@ -1,7 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ac2a2799-e2c8-4d31-bf64-bdeecaadb646" name="Default" comment="" />
+    <list default="true" id="ac2a2799-e2c8-4d31-bf64-bdeecaadb646" name="Default" comment="">
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\assets\morph\lang\bg_BG.lang" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\assets\morph\lang\cs_CZ.lang" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\assets\morph\lang\de_DE.lang" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\assets\morph\lang\en_US.lang" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\assets\morph\lang\es_ES.lang" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\assets\morph\lang\et_EE.lang" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\assets\morph\lang\fi_FI.lang" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\assets\morph\lang\fr_CA.lang" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\assets\morph\lang\fr_FR.lang" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\assets\morph\lang\hr_HR.lang" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\assets\morph\lang\hu_HU.lang" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\assets\morph\lang\it_IT.lang" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\assets\morph\lang\nb_NO.lang" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\assets\morph\lang\nl_NL.lang" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\assets\morph\lang\pl_PL.lang" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\assets\morph\lang\pt_BR.lang" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\assets\morph\lang\ru_RU.lang" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\assets\morph\lang\sv_SE.lang" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\assets\morph\lang\uk_UA.lang" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\assets\morph\lang\zh_CN.lang" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\assets\morph\mod\ModMobSupport.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\assets\morph\mod\NBTStripper.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\assets\morph\sound\morph1.ogg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\assets\morph\sound\morph2.ogg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\assets\morph\sound\morph3.ogg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\assets\morph\sound\morph4.ogg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\assets\morph\sound\morph5.ogg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\assets\morph\sound\morph6.ogg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\assets\morph\textures\gui\fav.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\assets\morph\textures\gui\guiSelected.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\assets\morph\textures\gui\guiUnselected.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\assets\morph\textures\gui\guiUnselectedSide.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\assets\morph\textures\icon\climb.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\assets\morph\textures\icon\fallNegate.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\assets\morph\textures\icon\fireImmunity.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\assets\morph\textures\icon\float.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\assets\morph\textures\icon\fly.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\assets\morph\textures\icon\hostile.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\assets\morph\textures\icon\poisonResistance.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\assets\morph\textures\icon\step.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\assets\morph\textures\icon\sunburn.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\assets\morph\textures\icon\swim.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\assets\morph\textures\icon\waterAllergy.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\assets\morph\textures\icon\witherResistance.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\assets\morph\textures\skin\morphskin.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\morph\api\Ability.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\morph\api\Api.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\morph\client\core\ClientProxy.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\morph\client\core\KeyBindHook.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\morph\client\core\PacketHandlerClient.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\morph\client\core\TickHandlerClient.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\morph\client\entity\EntityMorphAcquisition.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\morph\client\gui\GuiKeyBinds.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\morph\client\model\ModelHelper.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\morph\client\model\ModelInfo.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\morph\client\model\ModelList.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\morph\client\model\ModelMorph.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\morph\client\model\ModelMorphAcquisition.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\morph\client\morph\MorphInfoClient.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\morph\client\render\EntityRendererProxy.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\morph\client\render\HandRenderHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\morph\client\render\RenderMorph.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\morph\client\render\RenderPlayerHand.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\morph\common\Morph.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\morph\common\ability\AbilityClimb.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\morph\common\ability\AbilityFallNegate.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\morph\common\ability\AbilityFireImmunity.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\morph\common\ability\AbilityFloat.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\morph\common\ability\AbilityFly.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\morph\common\ability\AbilityHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\morph\common\ability\AbilityHostile.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\morph\common\ability\AbilityPoisonResistance.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\morph\common\ability\AbilityStep.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\morph\common\ability\AbilitySunburn.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\morph\common\ability\AbilitySwim.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\morph\common\ability\AbilityWaterAllergy.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\morph\common\ability\AbilityWitherResistance.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\morph\common\ability\mod\AbilitySupport.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\morph\common\core\ApiHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\morph\common\core\CommandMorph.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\morph\common\core\CommonProxy.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\morph\common\core\ConnectionHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\morph\common\core\DataHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\morph\common\core\EntityHelper.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\morph\common\core\EventHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\morph\common\core\MapPacketHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\morph\common\core\ObfHelper.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\morph\common\core\PacketHandlerServer.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\morph\common\core\SessionState.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\morph\common\core\TickHandlerServer.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\morph\common\morph\MorphHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\morph\common\morph\MorphInfo.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\morph\common\morph\MorphState.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ben Byers\Workspaces\Morph\morph\common\morph\mod\NBTStripper.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Morph.iml" afterPath="$PROJECT_DIR$/Morph.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Morph.ipr" afterPath="$PROJECT_DIR$/Morph.ipr" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Morph.iws" afterPath="$PROJECT_DIR$/Morph.iws" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
+    </list>
     <ignored path="Morph.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -54,68 +153,62 @@
     <breakpoint_rules converted="true" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="ExportToHTMLSettings">
+    <option name="printScope" value="1" />
+    <option name="PRINT_LINE_NUMBERS" value="true" />
+    <option name="OPEN_IN_BROWSER" value="true" />
+    <option name="OUTPUT_DIRECTORY" value="C:\Users\Ben Byers\Workspaces\Morph\exportToHTML" />
+  </component>
   <component name="FavoritesManager">
     <favorites_list name="Morph" />
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="DataHandler.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/morph/common/core/DataHandler.java">
+      <file leaf-file-name="build.gradle" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1224">
-              <caret line="66" column="24" selection-start-line="66" selection-start-column="24" selection-end-line="66" selection-end-column="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2236#2237#0" expanded="true" />
-                <element signature="e#2288#2289#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EventHandler.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/morph/common/core/EventHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="13879" max-vertical-offset="15436">
-              <caret line="825" column="235" selection-start-line="825" selection-start-column="235" selection-end-line="825" selection-end-column="235" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="952">
+              <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Morph.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/morph/common/Morph.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/morph/common/Morph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="795" max-vertical-offset="5695">
-              <caret line="113" column="4" selection-start-line="113" selection-start-column="4" selection-end-line="113" selection-end-column="4" />
-              <folding>
-                <element signature="e#4053#4088#0" expanded="true" />
-                <element signature="e#4163#4171#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5746">
+              <caret line="201" column="36" selection-start-line="201" selection-start-column="36" selection-end-line="201" selection-end-column="36" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TickHandlerServer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/morph/common/core/TickHandlerServer.java">
+      <file leaf-file-name="CommonProxy.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/morph/common/core/CommonProxy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="5341" max-vertical-offset="5780">
-              <caret line="361" column="35" selection-start-line="361" selection-start-column="35" selection-end-line="361" selection-end-column="35" />
-              <folding>
-                <element signature="e#9810#9829#0" expanded="true" />
-                <element signature="e#9906#9937#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.0" vertical-offset="714" max-vertical-offset="1836">
+              <caret line="74" column="30" selection-start-line="74" selection-start-column="23" selection-end-line="74" selection-end-column="33" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConnectionHandler.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/morph/common/core/ConnectionHandler.java">
+      <file leaf-file-name="EntityList.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.6.4-9.11.1.964/forge-1.6.4-9.11.1.964-src.jar!/net/minecraft/entity/EntityList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8901099" vertical-offset="1890" max-vertical-offset="3179">
-              <caret line="163" column="17" selection-start-line="163" selection-start-column="17" selection-end-line="163" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.098981075" vertical-offset="0" max-vertical-offset="4352">
+              <caret line="65" column="13" selection-start-line="65" selection-start-column="13" selection-end-line="65" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SlimsMain.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/morph/common/core/SlimsFix/SlimsMain.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="952">
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -128,31 +221,49 @@
       <setting name="OPEN_NEW_TAB" value="true" />
     </FindUsagesManager>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/morph/common/core/DataHandler.java" />
+        <option value="$PROJECT_DIR$/morph/common/core/MorphData.java" />
+        <option value="$PROJECT_DIR$/morph/common/core/Test.java" />
+        <option value="$PROJECT_DIR$/morph/common/core/SlimsFix/SlimsEvents.java" />
+        <option value="$PROJECT_DIR$/morph/common/core/SlimsFix/MorphData.java" />
+        <option value="$PROJECT_DIR$/morph/common/morph/MorphInfo.java" />
+        <option value="$PROJECT_DIR$/morph/common/morph/MorphState.java" />
+        <option value="$PROJECT_DIR$/morph/common/core/SlimsFix/MorphMap.java" />
+        <option value="$PROJECT_DIR$/morph/common/core/TickHandlerServer.java" />
         <option value="$PROJECT_DIR$/morph/common/Morph.java" />
-        <option value="$PROJECT_DIR$/morph/common/core/EventHandler.java" />
+        <option value="$PROJECT_DIR$/morph/common/core/SlimsFix/DataHandler.java" />
         <option value="$PROJECT_DIR$/morph/common/core/ConnectionHandler.java" />
+        <option value="$PROJECT_DIR$/morph/common/core/EventHandler.java" />
+        <option value="$PROJECT_DIR$/morph/common/core/SlimsFix/SlimsMain.java" />
+        <option value="$PROJECT_DIR$/morph/common/core/CommandMorph.java" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/main/java/morph/common/core/SlimsFix/SlimsMain.java" />
       </list>
     </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState />
   </component>
   <component name="ModuleEditorState">
     <option name="LAST_EDITED_MODULE_NAME" />
     <option name="LAST_EDITED_TAB_NAME" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1" />
-    <option name="width" value="1438" />
-    <option name="height" value="860" />
+    <option name="width" value="1440" />
+    <option name="height" value="870" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
       <profile-state />
     </entry>
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -227,6 +338,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Morph" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Morph" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="morph" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -245,25 +386,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="morph" />
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
+              <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="morph" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Morph" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Morph" />
+              <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -289,11 +420,31 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="morph" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
+              <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SlimsFix" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -304,6 +455,18 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Morph" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -326,6 +489,18 @@
     <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Morph.ipr" />
     <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="options.lastSelected" value="reference.settings.deploy.options" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -333,6 +508,15 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$" />
+      <setting name="debug" value="false" />
+      <method />
+    </configuration>
     <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
       <module name="" />
       <setting name="vmparams" value="" />
@@ -551,43 +735,98 @@
       <changelist id="ac2a2799-e2c8-4d31-bf64-bdeecaadb646" name="Default" comment="" />
       <created>1407273878784</created>
       <updated>1407273878784</updated>
-      <workItem from="1407273879576" duration="17060000" />
+      <workItem from="1407273879576" duration="49909000" />
     </task>
-    <servers />
+    <servers>
+      <Trello shared="false">
+        <commitMessageFormat>{id} {summary}</commitMessageFormat>
+        <option name="currentBoard">
+          <TrelloBoard id="53c485169418bbf67b7a9cee" name="MilSpec Development" />
+        </option>
+        <option name="currentList">
+          <TrelloList id="53c485169418bbf67b7a9cf0" name="Doing">
+            <option name="moved" value="false" />
+          </TrelloList>
+        </option>
+        <option name="currentUser">
+          <TrelloUser id="51a703500e7506e328004266" name="slimshadeey" />
+        </option>
+        <password>df9fdf9adf98df93df93dfc8df9bdf93dfc9df9adfc8df9bdf98df9cdf92df99df99df9edfcedfcfdfc9df9ddf9adf9adf92df9ddf92df9adfc8df93df9cdfcbdfcedf98df9fdf93dfccdfccdf9cdfc9df99df92df9adf93df99dfc9df9edfc9df9cdf9cdf9bdfc9df9edfcedf9edf93dfc8df9bdfcedfcedf93df92df99df99</password>
+        <option name="loginAnonymously" value="false" />
+        <option name="shouldFormatCommitMessage" value="true" />
+        <option name="url" value="trello.com" />
+        <option name="useHttpAuthentication" value="false" />
+        <option name="useProxy" value="false" />
+        <username />
+      </Trello>
+    </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17060000" />
+    <option name="enabled" value="true" />
+    <option name="totallyTimeSpent" value="49909000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="0" width="1438" height="860" extended-state="1" />
+    <frame x="0" y="0" width="1440" height="870" extended-state="1" />
     <editor active="true" />
     <layout>
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329235" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30747923" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6748634" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3715847" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3280116" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329235" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24963716" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32946298" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="JProfiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24963716" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Time Tracking" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32946298" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3280116" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24963716" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329235" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6748634" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.46038252" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24963716" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32946298" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="JProfiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Time Tracking" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32946298" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -608,245 +847,37 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/morph/common/core/TickHandlerServer.java</url>
+          <line>80</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="1" />
+      <option name="time" value="4" />
     </breakpoint-manager>
   </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="Morph" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="Morph" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+      </PATH_ELEMENT>
+    </PATH>
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/.gradle/caches/artifacts-26/filestore/org.ow2.asm/asm-debug-all/4.1/source/1c218d5a0b8b932a1528b74069aa6973dcfcea74/asm-debug-all-4.1-sources.jar!/org/objectweb/asm/Type.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30862328" vertical-offset="0" max-vertical-offset="14382">
-          <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/morph/common/core/EntityHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4845">
-          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/morph/common/core/CommonProxy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1836">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/morph/common/core/CommandMorph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5083">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/morph/common/core/ApiHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2210">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/morph/common/ability/AbilityClimb.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1139">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/morph/common/ability/AbilityFallNegate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="697">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/morph/common/ability/AbilityFireImmunity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1887">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/morph/common/ability/AbilityFloat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1513">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/morph/common/ability/AbilityFly.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2244">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/morph/common/ability/AbilityHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2907">
-          <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/morph/common/ability/AbilityHostile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="748">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/morph/common/ability/AbilityStep.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1547">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/morph/common/ability/AbilityPoisonResistance.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="833">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/morph/common/ability/AbilitySunburn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1904">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/morph/common/ability/AbilitySwim.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4012">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/morph/common/ability/AbilityWaterAllergy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="799">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/morph/common/ability/AbilityWitherResistance.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1122">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/morph/common/ability/mod/AbilitySupport.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2669">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/morph/api/Ability.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4199">
-          <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/morph/api/Api.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2635">
-          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/morph/common/morph/MorphInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1479" max-vertical-offset="2159">
-          <caret line="78" column="70" selection-start-line="78" selection-start-column="70" selection-end-line="78" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/morph/common/morph/MorphState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3978">
-          <caret line="186" column="8" selection-start-line="186" selection-start-column="8" selection-end-line="186" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/morph/common/morph/MorphHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1275" max-vertical-offset="2431">
-          <caret line="101" column="37" selection-start-line="101" selection-start-column="37" selection-end-line="101" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/morph/common/morph/mod/NBTStripper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1259" max-vertical-offset="1921">
-          <caret line="30" column="35" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/morph/common/core/SessionState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
-          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/morph/common/core/ObfHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4077" max-vertical-offset="4726">
-          <caret line="155" column="9" selection-start-line="155" selection-start-column="9" selection-end-line="155" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/morph/common/core/MapPacketHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3043">
-          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/morph/common/core/PacketHandlerServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15407854" vertical-offset="0" max-vertical-offset="714">
-          <caret line="6" column="23" selection-start-line="6" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.6.4-9.11.1.964/forge-1.6.4-9.11.1.964-src.jar!/cpw/mods/fml/server/FMLServerHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="183" max-vertical-offset="3468">
@@ -985,58 +1016,306 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/morph/common/core/DataHandler.java">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1224">
-          <caret line="66" column="24" selection-start-line="66" selection-start-column="24" selection-end-line="66" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2236#2237#0" expanded="true" />
-            <element signature="e#2288#2289#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/morph/common/Morph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="795" max-vertical-offset="5695">
-          <caret line="113" column="4" selection-start-line="113" selection-start-column="4" selection-end-line="113" selection-end-column="4" />
-          <folding>
-            <element signature="e#4053#4088#0" expanded="true" />
-            <element signature="e#4163#4171#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/morph/common/core/EventHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="13879" max-vertical-offset="15436">
-          <caret line="825" column="235" selection-start-line="825" selection-start-column="235" selection-end-line="825" selection-end-column="235" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/morph/common/core/TickHandlerServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="5341" max-vertical-offset="5780">
-          <caret line="361" column="35" selection-start-line="361" selection-start-column="35" selection-end-line="361" selection-end-column="35" />
-          <folding>
-            <element signature="e#9810#9829#0" expanded="true" />
-            <element signature="e#9906#9937#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/morph/common/core/ConnectionHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8901099" vertical-offset="1890" max-vertical-offset="3179">
-          <caret line="163" column="17" selection-start-line="163" selection-start-column="17" selection-end-line="163" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="uml://JAVA/">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement />
+          <nodes>
+            <node x="249.00000000000006" y="1432.4285714285716">morph.common.core.EventHandler</node>
+            <node x="1301.857142857143" y="2683.571428571429">morph.common.core.SlimsFix.MorphData</node>
+            <node x="2288.1428571428573" y="2726.4285714285716">morph.client.render</node>
+            <node x="1546.142857142857" y="2318.714285714286">morph.common.core.MapPacketHandler</node>
+            <node x="1413.4285714285713" y="1141.0">morph.common.ability.AbilityHandler</node>
+            <node x="618.0" y="799.0">morph.common.ability.AbilityClimb</node>
+            <node x="" y="">morph.common.morph.mod</node>
+            <node x="1672.4285714285716" y="2662.1428571428573">morph.client.entity</node>
+            <node x="" y="">morph.common.core.SlimsFix.SlimsMain</node>
+            <node x="3649.0" y="786.0">morph.common.ability.AbilityFloat</node>
+            <node x="0.0" y="2515.0">morph.common.core.PacketHandlerServer</node>
+            <node x="1286.0" y="773.0">morph.common.ability.AbilityStep</node>
+            <node x="" y="">morph.common.core.CommandMorph</node>
+            <node x="1953.0" y="2333.0">morph.common.ability.mod.AbilitySupport</node>
+            <node x="" y="">morph.common.core.EntityHelper</node>
+            <node x="2353.0" y="786.0">morph.common.ability.AbilityFireImmunity</node>
+            <node x="542.0" y="2515.0">morph.client.core.PacketHandlerClient</node>
+            <node x="2156.714285714286" y="1982.142857142857">morph.common.morph.MorphState</node>
+            <node x="" y="">morph.common.core.ApiHandler</node>
+            <node x="2266.285714285714" y="1630.4285714285713">morph.api.Api</node>
+            <node x="" y="">morph.common.ability.AbilityWaterAllergy</node>
+            <node x="" y="">morph.common.core.TickHandlerServer</node>
+            <node x="1357.5714285714284" y="1717.4285714285713">morph.client.core.ClientProxy</node>
+            <node x="1084.0" y="2515.0">morph.common.core.SlimsFix.Test</node>
+            <node x="" y="">morph.common.core.SlimsFix.SlimsEvents</node>
+            <node x="2735.5714285714284" y="1504.7142857142858">morph.common.core.ConnectionHandler</node>
+            <node x="" y="">morph.common.morph.MorphHandler</node>
+            <node x="1282.0" y="2333.0">morph.client.core.KeyBindHook</node>
+            <node x="" y="">morph.common.core.ObfHelper</node>
+            <node x="1652.0" y="0.0">morph.api.Ability</node>
+            <node x="1808.5" y="918.5">morph.common.ability.AbilityHostile</node>
+            <node x="3436.142857142857" y="1602.1428571428569">morph.client.gui</node>
+            <node x="927.0" y="786.0">morph.common.ability.AbilityFly</node>
+            <node x="1604.7857142857142" y="2196.571428571429">morph.client.morph</node>
+            <node x="1502.0" y="2515.0">morph.client.model</node>
+            <node x="" y="">morph.common.ability.AbilitySwim</node>
+            <node x="309.0" y="799.0">morph.common.ability.AbilityPoisonResistance</node>
+            <node x="2761.428571428571" y="2049.0">morph.client.core.TickHandlerClient</node>
+            <node x="" y="">morph.common.ability.AbilitySunburn</node>
+            <node x="" y="">morph.common.Morph</node>
+            <node x="976.4285714285716" y="1832.142857142857">morph.common.morph.MorphInfo</node>
+            <node x="1996.0" y="2515.0">morph.common.core.SessionState</node>
+            <node x="" y="">morph.common.ability.AbilityWitherResistance</node>
+            <node x="728.0000000000001" y="2702.142857142857">morph.common.core.SlimsFix.DataHandler</node>
+            <node x="1677.5714285714287" y="1650.4285714285716">morph.common.core.CommonProxy</node>
+            <node x="" y="">morph.common.ability.AbilityFallNegate</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="morph.common.core.TickHandlerServer" target="morph.common.morph.MorphInfo">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="morph.common.ability.AbilityClimb" target="morph.api.Ability">
+              <point x="0.0" y="-120.5" />
+              <point x="762.5" y="723.0" />
+              <point x="1789.291666666667" y="723.0" />
+              <point x="-192.20833333333326" y="341.5" />
+            </edge>
+            <edge source="morph.client.model" target="morph.client.model">
+              <point x="0.0" y="0.0" />
+              <point x="1564.0" y="2488.5" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="morph.common.ability.AbilityHandler" target="morph.api.Ability">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="morph.common.core.EntityHelper" target="morph.common.morph.MorphInfo">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="morph.client.entity" target="morph.client.model">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="morph.common.ability.AbilitySunburn" target="morph.api.Ability">
+              <point x="0.0" y="-133.5" />
+              <point x="3474.5" y="713.0" />
+              <point x="2228.625" y="713.0" />
+              <point x="247.125" y="341.5" />
+            </edge>
+            <edge source="morph.common.ability.AbilityFallNegate" target="morph.api.Ability">
+              <point x="0.0" y="-120.5" />
+              <point x="144.5" y="703.0" />
+              <point x="1679.4583333333335" y="703.0" />
+              <point x="-302.0416666666665" y="341.5" />
+            </edge>
+            <edge source="morph.common.core.CommonProxy" target="morph.common.core.TickHandlerServer">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="morph.client.core.ClientProxy" target="morph.client.core.KeyBindHook">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="morph.common.core.MapPacketHandler" target="morph.common.morph.MorphInfo">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="morph.client.morph" target="morph.client.model">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="morph.common.core.ConnectionHandler" target="morph.common.morph.MorphInfo">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="morph.client.core.TickHandlerClient" target="morph.common.morph.MorphState">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.7000000000000001" x="1351.4285714285713" y="343.42857142857133" />
+          <SelectedNodes>
+            <node>morph.api.Ability</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Methods</Category>
+          </Categories>
+          <SCOPE>Project Files</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/morph">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>morph</OriginalElement>
+          <nodes>
+            <node x="1758.0" y="512.0">morph.common.core.EventHandler</node>
+            <node x="24.25000000000003" y="1705.0">morph.common.core.SlimsFix.MorphData</node>
+            <node x="1069.0" y="655.0">morph.common.core.MapPacketHandler</node>
+            <node x="1420.25" y="1614.0">morph.common.core.SlimsFix.SlimsMain</node>
+            <node x="2988.5666666666666" y="196.00000000000006">morph.common.ability</node>
+            <node x="603.0" y="1983.0">morph.common.core.PacketHandlerServer</node>
+            <node x="1458.0" y="642.0">morph.common.core.CommandMorph</node>
+            <node x="581.9999999999999" y="577.0">morph.common.core.EntityHelper</node>
+            <node x="748.9843984962406" y="0.0">morph.common.morph.MorphState</node>
+            <node x="927.25" y="1614.0">morph.common.core.ApiHandler</node>
+            <node x="0.0" y="525.0">morph.common.core.TickHandlerServer</node>
+            <node x="0.0" y="1879.0">morph.common.core.SlimsFix.Test</node>
+            <node x="46.23395989974915" y="959.0">morph.common.core.SlimsFix.SlimsEvents</node>
+            <node x="2318.0" y="353.0">morph.common.core.ConnectionHandler</node>
+            <node x="0.0" y="1983.0">morph.common.morph.MorphHandler</node>
+            <node x="520.25" y="1614.0">morph.common.core.ObfHelper</node>
+            <node x="2691.9429824561403" y="78.0">morph.api</node>
+            <node x="1777.25" y="1614.0">morph.common.morph.mod.NBTStripper</node>
+            <node x="1145.0" y="1983.0">morph.client</node>
+            <node x="960.8592105263156" y="1146.0">morph.common.Morph</node>
+            <node x="1264.7339598997492" y="279.0">morph.common.morph.MorphInfo</node>
+            <node x="1308.0" y="1983.0">morph.common.core.SessionState</node>
+            <node x="147.25" y="1614.0">morph.common.core.SlimsFix.DataHandler</node>
+            <node x="375.23395989974915" y="959.0">morph.common.core.CommonProxy</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.5000000000000001" x="1448.9999999999995" y="779.9999999999998" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Methods</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="952">
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/morph/common/core/SlimsFix/SlimsMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="952">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/morph/common/Morph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5746">
+          <caret line="201" column="36" selection-start-line="201" selection-start-column="36" selection-end-line="201" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/morph/common/core/CommonProxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="714" max-vertical-offset="1836">
+          <caret line="74" column="30" selection-start-line="74" selection-start-column="23" selection-end-line="74" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.6.4-9.11.1.964/forge-1.6.4-9.11.1.964-src.jar!/net/minecraft/entity/EntityList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.098981075" vertical-offset="0" max-vertical-offset="4352">
+          <caret line="65" column="13" selection-start-line="65" selection-start-column="13" selection-end-line="65" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="Copyright.UI" />
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.6</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Morph</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI" />
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI" />
+    </states>
   </component>
 </project>
 

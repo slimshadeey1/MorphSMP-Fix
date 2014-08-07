@@ -1,0 +1,7 @@
+{
+	"repo": "http://files.minecraftforge.net/CodeChickenLib/",
+	"file": "CodeChickenLib-universal-1.6.4-@VERSION@.jar",
+	"dev": "CodeChickenLib-dev-1.6.4-@VERSION@.jar",
+	"class": "codechicken.lib.asm.ASMHelper",
+	"version": "1.0.0.44"
+}

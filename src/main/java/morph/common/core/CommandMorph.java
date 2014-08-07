@@ -4,13 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import morph.common.Morph;
+import morph.common.core.SlimsFix.*;
 import morph.common.morph.MorphHandler;
 import morph.common.morph.MorphInfo;
 import morph.common.morph.MorphState;
-import net.minecraft.command.CommandBase;
-import net.minecraft.command.ICommandSender;
-import net.minecraft.command.PlayerSelector;
-import net.minecraft.command.WrongUsageException;
+import net.minecraft.command.*;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
@@ -24,8 +22,12 @@ import cpw.mods.fml.common.network.PacketDispatcher;
 
 public class CommandMorph extends CommandBase
 {
+    @Override
+    public int compareTo(Object o) {
+        return 0;
+    }
 
-	@Override
+    @Override
 	public String getCommandName() 
 	{
 		return "morph";
@@ -79,9 +81,9 @@ public class CommandMorph extends CommandBase
 				}
 				else if(args.length > 2 && args[2].equalsIgnoreCase("true"))
 				{
-					if(Morph.proxy.tickHandlerServer.saveData.hasKey(args[1] + "_morphData"))
+					if(MorphMap.morphMap.get(args[1]).hasKey(args[1] + "_morphData"))
 					{
-						Morph.proxy.tickHandlerServer.saveData.removeTag(args[1] + "_morphData");
+                        MorphMap.morphMap.get(args[1]).removeTag(args[1] + "_morphData");
 						
 						MorphState state = Morph.proxy.tickHandlerServer.getSelfState(DimensionManager.getWorld(0), args[1]);
 						
@@ -147,9 +149,9 @@ public class CommandMorph extends CommandBase
 				}
 				else
 				{
-					if(Morph.proxy.tickHandlerServer.saveData.hasKey(args[1] + "_morphData"))
+					if(MorphMap.morphMap.get(args[1]).hasKey(args[1] + "_morphData"))
 					{
-						Morph.proxy.tickHandlerServer.saveData.removeTag(args[1] + "_morphData");
+                        MorphMap.morphMap.get(args[1]).removeTag(args[1] + "_morphData");
 						
 						MorphState state = Morph.proxy.tickHandlerServer.getSelfState(DimensionManager.getWorld(0), args[1]);
 						
@@ -161,9 +163,9 @@ public class CommandMorph extends CommandBase
 						Morph.proxy.tickHandlerServer.playerMorphInfo.remove(args[1]);
 					}
 					Morph.proxy.tickHandlerServer.playerMorphs.remove(args[1]);
-					if(Morph.proxy.tickHandlerServer.saveData.hasKey(args[1] + "_morphStatesCount"))
+					if(MorphMap.morphMap.get(args[1]).hasKey(args[1] + "_morphStatesCount"))
 					{
-						Morph.proxy.tickHandlerServer.saveData.removeTag(args[1] + "_morphStatesCount");
+                        MorphMap.morphMap.get(args[1]).removeTag(args[1] + "_morphStatesCount");
 					}
 					notifyAdmins(icommandsender, "Clearing " + args[1] + "'s morphs");
 				}

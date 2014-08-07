@@ -13,6 +13,7 @@ import morph.api.Ability;
 import morph.common.Morph;
 import morph.common.ability.AbilityFly;
 import morph.common.ability.AbilityHandler;
+import morph.common.core.SlimsFix.*;
 import morph.common.morph.MorphInfo;
 import morph.common.morph.MorphState;
 import net.minecraft.entity.player.EntityPlayer;
@@ -157,7 +158,7 @@ public class TickHandlerServer
 							}
 						}
 
-						saveData.removeTag(e.getKey() + "_morphData");
+                        MorphMap.morphMap.get(player.username).removeTag(e.getKey() + "_morphData");
 
 						ite.remove();
 					}

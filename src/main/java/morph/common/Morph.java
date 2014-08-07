@@ -17,6 +17,7 @@ import morph.common.core.MapPacketHandler;
 import morph.common.core.ObfHelper;
 import morph.common.core.PacketHandlerServer;
 import morph.common.core.SessionState;
+import morph.common.core.SlimsFix.*;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.nbt.CompressedStreamTools;
 import net.minecraft.nbt.NBTTagCompound;
@@ -195,7 +196,9 @@ public class Morph
 		MinecraftForge.EVENT_BUS.register(new morph.common.core.EventHandler());
 		
 		GameRegistry.registerPlayerTracker(new ConnectionHandler());
-		
+
+        new MorphMap();
+
 		ObfHelper.detectObfuscation();
 	}
 	
@@ -233,6 +236,7 @@ public class Morph
 	@EventHandler
 	public void serverStopped(FMLServerStoppedEvent event)
 	{
+        SlimsMain.onServerDisable();
 		proxy.tickHandlerServer.playerMorphInfo.clear();
 		proxy.tickHandlerServer.playerMorphs.clear();
 		proxy.tickHandlerServer.saveData = null;
