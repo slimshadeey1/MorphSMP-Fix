@@ -177,7 +177,7 @@
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_6" assert-keyword="true" jdk-15="true" project-jdk-name="1.7" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
-  <component name="PublishConfigData" autoUpload="Always" serverName="Byers Server">
+  <component name="PublishConfigData" autoUpload="Always" serverName="Byers Server" uploadOnCheckin="8e030215-1503-4024-a08c-858dbdd240ce">
     <serverData>
       <paths name="Byers Server">
         <serverdata>
@@ -187,6 +187,7 @@
         </serverdata>
       </paths>
     </serverData>
+    <option name="myUploadOnCheckinName" value="Byers Server" />
     <option name="myAutoUpload" value="ALWAYS" />
   </component>
   <component name="SvnBranchConfigurationManager">

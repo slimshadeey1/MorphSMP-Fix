@@ -11,7 +11,8 @@ ibxm/
 net/
 paulscode/
 assets/forge/
-
+Logs/
+ui/
 gradle/
 eclipse/
 Etc/
