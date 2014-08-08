@@ -53,16 +53,16 @@ public class DataHandler implements IExtendedEntityProperties {
         }
     }
 
-    public void setMorphData(NBTTagCompound morphData) {
-        FMLServerHandler.instance().getServer().logInfo("Player: " + PlayerE.username + " Setting Morph data!");
-        MorphData = morphData;
-        saveNBTData(PlayerE.getEntityData());
-    }
-
     public NBTTagCompound getMorphData() {
         FMLServerHandler.instance().getServer().logInfo("Player: " + PlayerE.username + " Getting Morph data!");
         loadNBTData(PlayerE.getEntityData());
         return MorphData;
+    }
+
+    public void setMorphData(NBTTagCompound morphData) {
+        FMLServerHandler.instance().getServer().logInfo("Player: " + PlayerE.username + " Setting Morph data!");
+        MorphData = morphData;
+        saveNBTData(PlayerE.getEntityData());
     }
 
     public NBTTagCompound getNewMorphData() {

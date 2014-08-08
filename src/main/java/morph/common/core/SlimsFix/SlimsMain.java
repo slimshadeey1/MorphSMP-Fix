@@ -29,7 +29,14 @@ public class SlimsMain {
             DataHandler respawn = new DataHandler();
             respawn.register(player, respawn);
             FMLServerHandler.instance().getServer().logInfo("Player: " + player.username + " MorphData registered!");
-            if (MorphMap.morphMap.containsKey(player.username)) {
+            Boolean morphNew = false;
+            try {
+                if (MorphMap.morphMap.containsKey(player.username))
+                    morphNew = true;
+            } catch (Exception e) {
+
+            }
+            if (morphNew) {
                 try {
                     respawn.setMorphData(MorphMap.morphMap.get(player.username));
                 } catch (Exception e) {

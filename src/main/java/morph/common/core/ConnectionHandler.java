@@ -3,6 +3,7 @@ package morph.common.core;
 import cpw.mods.fml.common.*;
 import cpw.mods.fml.common.network.*;
 import cpw.mods.fml.relauncher.*;
+import cpw.mods.fml.server.*;
 import morph.common.*;
 import morph.common.core.SlimsFix.*;
 import morph.common.morph.*;
@@ -65,7 +66,15 @@ public class ConnectionHandler
 
     @Override
     public void onPlayerLogin(EntityPlayer player) {
-        if (MorphMap.morphMap.get(player.username) != null) {
+        Boolean morphReady = false;
+        try {
+            if (MorphMap.morphMap.get(player.username) != null)
+                morphReady = true;
+        }catch (Exception e){
+            FMLServerHandler.instance().getServer().logInfo("Player: " + player.username + " does not have data ready in map!");
+        }
+        
+        if (morphReady) {
             ArrayList list = Morph.proxy.tickHandlerServer.getPlayerMorphs(player.worldObj, player.username);
 
             if (MorphMap.morphMap.get(player.username) != null) {

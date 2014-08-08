@@ -190,14 +190,13 @@ public class Morph
 
 			renderCrosshairInRadialMenu = addCommentAndReturnInt(config, "client", "renderCrosshairInRadialMenu", "As per request, render the crosshair position when in the radial menu.\n0 = No\n1 = Yes", 0);
 		}
-		
+        new MorphMap();
+
 		config.save();
 		
 		MinecraftForge.EVENT_BUS.register(new morph.common.core.EventHandler());
 		
 		GameRegistry.registerPlayerTracker(new ConnectionHandler());
-
-        new MorphMap();
 
 		ObfHelper.detectObfuscation();
 	}
