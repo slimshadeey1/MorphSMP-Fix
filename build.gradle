@@ -8,7 +8,6 @@ buildscript {
         }
     }
     dependencies {
-        classpath 'net.minecraftforge.gradle:cauldron'
         classpath 'net.minecraftforge.gradle:ForgeGradle:1.0-SNAPSHOT'
 
     }
@@ -19,30 +18,28 @@ apply plugin: 'forge'
 
 
 version = "0.7.1"
-group= "morph" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+group = "morph" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "morph"
 
 minecraft {
-	version = "1.6.4-9.11.1.964"
+    version = "1.6.4-9.11.1.964"
 
 }
-minecraft{
-    net.minecraftforge.cauldron
-}
+
 processResources
-{
-    // replace stuff in mcmod.info, nothing else
-    from(sourceSets.main.resources.srcDirs) {
-        include 'mcmod.info'
-                
-        // replace version and mcversion
-    }
-        
-    // copy everything else, thats not the mcmod.info
-    from(sourceSets.main.resources.srcDirs) {
-        exclude 'mcmod.info'
-    }
-}
+        {
+            // replace stuff in mcmod.info, nothing else
+            from(sourceSets.main.resources.srcDirs) {
+                include 'mcmod.info'
+
+                // replace version and mcversion
+            }
+
+            // copy everything else, thats not the mcmod.info
+            from(sourceSets.main.resources.srcDirs) {
+                exclude 'mcmod.info'
+            }
+        }
 
 // add source jar
 task sourceJar(type: Jar) {

@@ -355,7 +355,15 @@
         </SOURCES>
       </library>
     </orderEntry>
-    <orderEntry type="library" name="cauldron-1.6.4-1.965.21.144-server" level="project" />
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/cauldron-1.6.4-1.965.21.144-server.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>
 

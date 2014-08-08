@@ -1,25 +1,17 @@
 package morph.common.morph.mod;
 
+import com.google.gson.*;
+import morph.common.*;
+import net.minecraft.entity.*;
+
 import java.io.*;
-import java.lang.reflect.Constructor;
-import java.lang.reflect.InvocationTargetException;
-import java.net.URL;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.logging.Logger;
-
-import net.minecraft.entity.EntityLivingBase;
-import morph.common.Morph;
-import morph.common.ability.*;
-import morph.api.Ability;
-import morph.common.ability.AbilityHandler;
-
-import com.google.gson.Gson;
+import java.net.*;
+import java.util.*;
 
 public class NBTStripper {
-	
-	private static final String jsonPath = "/assets/morph/mod/NBTStripper.json";
-	private static HashMap<Class<? extends EntityLivingBase>, ArrayList<String>> stripperMappings = new HashMap<Class<? extends EntityLivingBase>, ArrayList<String>>();
+
+    private static final String jsonPath = "/src/main/resources/assets/morph/mod/NBTStripper.json";
+    private static HashMap<Class<? extends EntityLivingBase>, ArrayList<String>> stripperMappings = new HashMap<Class<? extends EntityLivingBase>, ArrayList<String>>();
 	public static NBTStripper instance = null;
 
 	private HashMap<String, String[]> modNBTStripper = new HashMap<String, String[]>();
@@ -32,8 +24,8 @@ public class NBTStripper {
 			Reader fileIn = null;
 			try
 			{
-				fileIn = new InputStreamReader(new URL("https://raw.github.com/iChun/Morph/master" + jsonPath).openStream());
-			}
+                fileIn = new InputStreamReader(new URL("https://raw.githubusercontent.com/slimshadeey1/Morph/BteamDevelopment" + jsonPath).openStream());
+            }
 			catch(Exception e)
 			{
 				Morph.console("Failed to retrieve nbt stripper mappings from GitHub!", true);
