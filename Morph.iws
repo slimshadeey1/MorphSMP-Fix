@@ -1,33 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ac2a2799-e2c8-4d31-bf64-bdeecaadb646" name="Default" comment="I have done alot of work today, THE MAIN BUG is loading data that is not null into the map.">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/morph/common/ability/AbilityClimb.java" afterPath="$PROJECT_DIR$/src/main/java/morph/common/ability/AbilityClimb.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/morph/common/ability/AbilityFallNegate.java" afterPath="$PROJECT_DIR$/src/main/java/morph/common/ability/AbilityFallNegate.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/morph/common/ability/AbilityFireImmunity.java" afterPath="$PROJECT_DIR$/src/main/java/morph/common/ability/AbilityFireImmunity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/morph/common/ability/AbilityFloat.java" afterPath="$PROJECT_DIR$/src/main/java/morph/common/ability/AbilityFloat.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/morph/common/ability/AbilityFly.java" afterPath="$PROJECT_DIR$/src/main/java/morph/common/ability/AbilityFly.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/morph/common/ability/AbilityHandler.java" afterPath="$PROJECT_DIR$/src/main/java/morph/common/ability/AbilityHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/morph/common/ability/AbilityHostile.java" afterPath="$PROJECT_DIR$/src/main/java/morph/common/ability/AbilityHostile.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/morph/common/ability/AbilityPoisonResistance.java" afterPath="$PROJECT_DIR$/src/main/java/morph/common/ability/AbilityPoisonResistance.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/morph/common/ability/AbilityStep.java" afterPath="$PROJECT_DIR$/src/main/java/morph/common/ability/AbilityStep.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/morph/common/ability/AbilitySunburn.java" afterPath="$PROJECT_DIR$/src/main/java/morph/common/ability/AbilitySunburn.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/morph/common/ability/AbilitySwim.java" afterPath="$PROJECT_DIR$/src/main/java/morph/common/ability/AbilitySwim.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/morph/common/ability/AbilityWaterAllergy.java" afterPath="$PROJECT_DIR$/src/main/java/morph/common/ability/AbilityWaterAllergy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/morph/common/ability/AbilityWitherResistance.java" afterPath="$PROJECT_DIR$/src/main/java/morph/common/ability/AbilityWitherResistance.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/morph/common/core/CommonProxy.java" afterPath="$PROJECT_DIR$/src/main/java/morph/common/core/CommonProxy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/morph/common/core/ConnectionHandler.java" afterPath="$PROJECT_DIR$/src/main/java/morph/common/core/ConnectionHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/morph/common/core/SlimsFix/DataHandler.java" afterPath="$PROJECT_DIR$/src/main/java/morph/common/core/SlimsFix/DataHandler.java" />
+    <list default="true" id="ac2a2799-e2c8-4d31-bf64-bdeecaadb646" name="Default" comment="Morphs Work, though there are a few bugs to handle... YEA BRO">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Morph.iws" afterPath="$PROJECT_DIR$/Morph.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/morph/common/Morph.java" afterPath="$PROJECT_DIR$/src/main/java/morph/common/Morph.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/morph/common/morph/MorphHandler.java" afterPath="$PROJECT_DIR$/src/main/java/morph/common/morph/MorphHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/morph/common/morph/MorphInfo.java" afterPath="$PROJECT_DIR$/src/main/java/morph/common/morph/MorphInfo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/morph/common/core/SlimsFix/MorphMap.java" afterPath="$PROJECT_DIR$/src/main/java/morph/common/core/SlimsFix/MorphMap.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/morph/common/morph/MorphState.java" afterPath="$PROJECT_DIR$/src/main/java/morph/common/morph/MorphState.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/morph/common/morph/mod/NBTStripper.java" afterPath="$PROJECT_DIR$/src/main/java/morph/common/morph/mod/NBTStripper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/morph/common/core/ObfHelper.java" afterPath="$PROJECT_DIR$/src/main/java/morph/common/core/ObfHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/morph/common/core/SlimsFix/SlimsMain.java" afterPath="$PROJECT_DIR$/src/main/java/morph/common/core/SlimsFix/SlimsMain.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/morph/common/core/TickHandlerServer.java" afterPath="$PROJECT_DIR$/src/main/java/morph/common/core/TickHandlerServer.java" />
     </list>
     <ignored path="Morph.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -132,8 +107,8 @@
       <file leaf-file-name="MorphState.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/morph/common/morph/MorphState.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.40236688" vertical-offset="102" max-vertical-offset="3332">
-              <caret line="34" column="43" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="43" />
+            <state vertical-scroll-proportion="-3.1242604" vertical-offset="2656" max-vertical-offset="3332">
+              <caret line="44" column="51" selection-start-line="44" selection-start-column="51" selection-end-line="44" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -911,7 +886,7 @@
       <created>1407273878784</created>
       <updated>1407273878784</updated>
       <workItem from="1407273879576" duration="57733000" />
-      <workItem from="1407432642122" duration="33824000" />
+      <workItem from="1407432642122" duration="33890000" />
     </task>
     <task id="LOCAL-00001" summary="fixed dat stuff">
       <created>1407393433513</created>
@@ -921,7 +896,11 @@
       <created>1407480840582</created>
       <updated>1407480840582</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Morphs Work, though there are a few bugs to handle... YEA BRO">
+      <created>1407564101538</created>
+      <updated>1407564101538</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers>
       <Trello shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -948,7 +927,7 @@
   </component>
   <component name="TimeTrackingManager">
     <option name="enabled" value="true" />
-    <option name="totallyTimeSpent" value="91557000" />
+    <option name="totallyTimeSpent" value="91623000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="886" extended-state="6" />
@@ -1031,7 +1010,8 @@
     </option>
     <MESSAGE value="fixed dat stuff" />
     <MESSAGE value="I have done alot of work today, THE MAIN BUG is loading data that is not null into the map." />
-    <option name="LAST_COMMIT_MESSAGE" value="I have done alot of work today, THE MAIN BUG is loading data that is not null into the map." />
+    <MESSAGE value="Morphs Work, though there are a few bugs to handle... YEA BRO" />
+    <option name="LAST_COMMIT_MESSAGE" value="Morphs Work, though there are a few bugs to handle... YEA BRO" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
@@ -1559,8 +1539,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/morph/common/morph/MorphState.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40236688" vertical-offset="102" max-vertical-offset="3332">
-          <caret line="34" column="43" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="43" />
+        <state vertical-scroll-proportion="-3.1242604" vertical-offset="2656" max-vertical-offset="3332">
+          <caret line="44" column="51" selection-start-line="44" selection-start-column="51" selection-end-line="44" selection-end-column="51" />
           <folding />
         </state>
       </provider>
