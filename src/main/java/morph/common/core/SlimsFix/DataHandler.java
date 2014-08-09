@@ -27,7 +27,7 @@ public class DataHandler implements IExtendedEntityProperties {
         PlayerE = player;
         hasMD = hasData();
         try {
-            if (hasMD) {
+            if (!hasMD) {
                 player.registerExtendedProperties(DataHandler.property, dataHandler);
                 FMLServerHandler.instance().getServer().logInfo("Player: " + PlayerE.username + " New data has been Registered!");
             }
@@ -55,7 +55,18 @@ public class DataHandler implements IExtendedEntityProperties {
 
     public NBTTagCompound getMorphData() {
         FMLServerHandler.instance().getServer().logInfo("Player: " + PlayerE.username + " Getting Morph data!");
-        loadNBTData(PlayerE.getEntityData());
+        try {
+            loadNBTData(PlayerE.getEntityData());
+            FMLServerHandler.instance().getServer().logInfo("Player: " + PlayerE.username + " Loaded Morph data!");
+        } catch (Exception e) {
+            FMLServerHandler.instance().getServer().logInfo("Player: " + PlayerE.username + " Error loading Morph data! Error: " + e.getMessage());
+        }
+        try {
+            MorphMap.morphMap.put(PlayerE.username, MorphData);
+            FMLServerHandler.instance().getServer().logInfo("Player: " + PlayerE.username + " Morph data has been placed in map!");
+        } catch (Exception e) {
+            FMLServerHandler.instance().getServer().logInfo("Player: " + PlayerE.username + " Error putting morph data in map! Error:" + e.getMessage());
+        }
         return MorphData;
     }
 

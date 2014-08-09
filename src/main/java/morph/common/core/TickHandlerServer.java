@@ -17,6 +17,11 @@ import java.util.Map.*;
 
 public class TickHandlerServer
         implements ITickHandler {
+    public long clock;
+    public int lastIndex;
+    public HashMap<String, MorphInfo> playerMorphInfo = new HashMap<String, MorphInfo>();
+    public HashMap<String, ArrayList<MorphState>> playerMorphs = new HashMap<String, ArrayList<MorphState>>();
+
     @Override
     public void tickStart(EnumSet<TickType> type, Object... tickData) {
         if (type.equals(EnumSet.of(TickType.WORLD))) {
@@ -269,12 +274,4 @@ public class TickHandlerServer
 
         }
     }
-
-    public long clock;
-
-    public int lastIndex;
-
-
-    public HashMap<String, MorphInfo> playerMorphInfo = new HashMap<String, MorphInfo>();
-    public HashMap<String, ArrayList<MorphState>> playerMorphs = new HashMap<String, ArrayList<MorphState>>();
 }

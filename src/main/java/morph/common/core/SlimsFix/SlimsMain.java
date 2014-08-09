@@ -2,7 +2,6 @@ package morph.common.core.SlimsFix;
 
 import cpw.mods.fml.server.*;
 import morph.common.*;
-import morph.common.core.*;
 import net.minecraft.entity.player.*;
 import net.minecraft.nbt.*;
 
@@ -55,14 +54,22 @@ public class SlimsMain {
 
                     Morph.proxy.tickHandlerServer.updateSession(player);
 
-                    ConnectionHandler handle = new ConnectionHandler();
-                    handle.onPlayerLogin(player);
-
                 } catch (Exception n) {
                     FMLServerHandler.instance().getServer().logInfo("Player: " + player.username + " Error in loading new Morph Data in map! SHIT");
                     FMLServerHandler.instance().getServer().logInfo("Player: " + player.username + " Error in MorphMap data loading is" + n.getMessage());
                     n.getCause().printStackTrace();
                 }
+            }
+            Boolean mapCheck = false;
+            try {
+                if (MorphMap.morphMap.containsKey(player.username))
+                    mapCheck = true;
+            } catch (Exception e) {
+            }
+            if (mapCheck) {
+                FMLServerHandler.instance().getServer().logInfo("Player: " + player.username + " is in the map! Data: " + MorphMap.morphMap.get(player.username).toString());
+            } else {
+                FMLServerHandler.instance().getServer().logInfo("Player: " + player.username + " is not in the map!");
             }
             FMLServerHandler.instance().getServer().getConfigurationManager().saveAllPlayerData();
             FMLServerHandler.instance().getServer().logInfo("Player: " + player.username + " On Respawn succesful!");
@@ -112,6 +119,7 @@ public class SlimsMain {
         } catch (Exception e) {
         }
         FMLServerHandler.instance().getServer().getConfigurationManager().saveAllPlayerData();
+        MorphMap.Stop();
     }
 
     public static void onWorldSave() {

@@ -1,12 +1,13 @@
 package morph.common.ability;
 
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.potion.Potion;
-import net.minecraft.util.ResourceLocation;
-
-import morph.api.Ability;
+import morph.api.*;
+import net.minecraft.nbt.*;
+import net.minecraft.potion.*;
+import net.minecraft.util.*;
 
 public class AbilityPoisonResistance extends Ability {
+
+    public static final ResourceLocation iconResource = new ResourceLocation("morph", "textures/icon/poisonResistance.png");
 
     @Override
     public String getType() {
@@ -15,7 +16,7 @@ public class AbilityPoisonResistance extends Ability {
 
     @Override
     public void tick() {
-        if(this.getParent().isPotionActive(Potion.poison))
+        if (this.getParent().isPotionActive(Potion.poison))
             this.getParent().removePotionEffect(Potion.poison.id);
     }
 
@@ -45,7 +46,5 @@ public class AbilityPoisonResistance extends Ability {
         //Get someone to make a better icon -Lomeli12
         return iconResource;
     }
-
-    public static final ResourceLocation iconResource = new ResourceLocation("morph", "textures/icon/poisonResistance.png");
 
 }

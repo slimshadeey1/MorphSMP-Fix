@@ -13,8 +13,6 @@ import net.minecraft.util.*;
 import java.lang.reflect.*;
 
 public class ObfHelper {
-    public static boolean obfuscation;
-
     public static final String[] mainModel = new String[]{"i", "field_77045_g", "mainModel"}; //RendererLivingEntity
     public static final String[] textureOffsetX = new String[]{"r", "field_78803_o", "textureOffsetX"}; //ModelRenderer
     public static final String[] textureOffsetY = new String[]{"s", "field_78813_p", "textureOffsetY"}; //ModelRenderer
@@ -27,30 +25,22 @@ public class ObfHelper {
     public static final String[] isJumping = new String[]{"bd", "field_70703_bu", "isJumping"}; //EntityLivingBase
     public static final String[] shadowSize = new String[]{"d", "field_76989_e", "shadowSize"}; //Render
     public static final String[] tagMap = new String[]{"a", "field_74784_a", "tagMap"}; //NBTTagCompound
-
     public static final String setSizeObf = "func_70105_a";
     public static final String setSizeDeobf = "setSize";
-
     public static final String updateEntityActionStateObf = "func_70626_be";
     public static final String updateEntityActionStateDeobf = "updateEntityActionState";
-
     public static final String getEntityTextureObf = "func_110775_a";
     public static final String getEntityTextureDeobf = "getEntityTexture";
-
     public static final String preRenderCallbackObf = "func_77041_b";
     public static final String preRenderCallbackDeobf = "preRenderCallback";
-
     public static final String pushOutOfBlocksObf = "func_70048_i";
     public static final String pushOutOfBlocksDeobf = "pushOutOfBlocks";
-
     public static final String getHurtSoundObf = "func_70621_aR";
     public static final String getHurtSoundDeobf = "getHurtSound";
-
     public static final String renderHandObf = "func_78476_b";
     public static final String renderHandDeobf = "renderHand";
-
     public static final String alterSquishAmountObf = "func_70808_l";
-
+    public static boolean obfuscation;
     public static Method setSizeMethod;
     public static Method pushOutOfBlocksMethod;
 

@@ -15,6 +15,10 @@ import java.util.*;
 import java.util.Map.*;
 
 public class CommonProxy {
+    public TickHandlerClient tickHandlerClient;
+    public TickHandlerServer tickHandlerServer;
+    public ArrayList<Class> compatibleEntities = new ArrayList<Class>();
+
     public void initMod() {
         String[] classes = Morph.blacklistedMobs.split(", *");
         for (String className : classes) {
@@ -84,9 +88,4 @@ public class CommonProxy {
             handler.registerCommand(new CommandMorph());
         }
     }
-
-    public TickHandlerClient tickHandlerClient;
-    public TickHandlerServer tickHandlerServer;
-
-    public ArrayList<Class> compatibleEntities = new ArrayList<Class>();
 }

@@ -2,10 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac2a2799-e2c8-4d31-bf64-bdeecaadb646" name="Default" comment="I have done alot of work today, THE MAIN BUG is loading data that is not null into the map.">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/morph/common/ability/AbilityClimb.java" afterPath="$PROJECT_DIR$/src/main/java/morph/common/ability/AbilityClimb.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/morph/common/ability/AbilityFallNegate.java" afterPath="$PROJECT_DIR$/src/main/java/morph/common/ability/AbilityFallNegate.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/morph/common/ability/AbilityFireImmunity.java" afterPath="$PROJECT_DIR$/src/main/java/morph/common/ability/AbilityFireImmunity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/morph/common/ability/AbilityFloat.java" afterPath="$PROJECT_DIR$/src/main/java/morph/common/ability/AbilityFloat.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/morph/common/ability/AbilityFly.java" afterPath="$PROJECT_DIR$/src/main/java/morph/common/ability/AbilityFly.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/morph/common/ability/AbilityHandler.java" afterPath="$PROJECT_DIR$/src/main/java/morph/common/ability/AbilityHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/morph/common/ability/AbilityHostile.java" afterPath="$PROJECT_DIR$/src/main/java/morph/common/ability/AbilityHostile.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/morph/common/ability/AbilityPoisonResistance.java" afterPath="$PROJECT_DIR$/src/main/java/morph/common/ability/AbilityPoisonResistance.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/morph/common/ability/AbilityStep.java" afterPath="$PROJECT_DIR$/src/main/java/morph/common/ability/AbilityStep.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/morph/common/ability/AbilitySunburn.java" afterPath="$PROJECT_DIR$/src/main/java/morph/common/ability/AbilitySunburn.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/morph/common/ability/AbilitySwim.java" afterPath="$PROJECT_DIR$/src/main/java/morph/common/ability/AbilitySwim.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/morph/common/ability/AbilityWaterAllergy.java" afterPath="$PROJECT_DIR$/src/main/java/morph/common/ability/AbilityWaterAllergy.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/morph/common/ability/AbilityWitherResistance.java" afterPath="$PROJECT_DIR$/src/main/java/morph/common/ability/AbilityWitherResistance.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/morph/common/core/CommonProxy.java" afterPath="$PROJECT_DIR$/src/main/java/morph/common/core/CommonProxy.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/morph/common/core/ConnectionHandler.java" afterPath="$PROJECT_DIR$/src/main/java/morph/common/core/ConnectionHandler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/morph/common/core/SlimsFix/DataHandler.java" afterPath="$PROJECT_DIR$/src/main/java/morph/common/core/SlimsFix/DataHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Morph.iws" afterPath="$PROJECT_DIR$/Morph.iws" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/morph/common/Morph.java" afterPath="$PROJECT_DIR$/src/main/java/morph/common/Morph.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/morph/common/morph/MorphHandler.java" afterPath="$PROJECT_DIR$/src/main/java/morph/common/morph/MorphHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/morph/common/morph/MorphInfo.java" afterPath="$PROJECT_DIR$/src/main/java/morph/common/morph/MorphInfo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/morph/common/core/SlimsFix/MorphMap.java" afterPath="$PROJECT_DIR$/src/main/java/morph/common/core/SlimsFix/MorphMap.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/morph/common/morph/MorphState.java" afterPath="$PROJECT_DIR$/src/main/java/morph/common/morph/MorphState.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/morph/common/morph/mod/NBTStripper.java" afterPath="$PROJECT_DIR$/src/main/java/morph/common/morph/mod/NBTStripper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/morph/common/core/ObfHelper.java" afterPath="$PROJECT_DIR$/src/main/java/morph/common/core/ObfHelper.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/morph/common/core/SlimsFix/SlimsMain.java" afterPath="$PROJECT_DIR$/src/main/java/morph/common/core/SlimsFix/SlimsMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/morph/common/core/TickHandlerServer.java" afterPath="$PROJECT_DIR$/src/main/java/morph/common/core/TickHandlerServer.java" />
     </list>
     <ignored path="Morph.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -73,14 +95,14 @@
       <file leaf-file-name="DataHandler.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/morph/common/core/SlimsFix/DataHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1700">
-              <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="191" max-vertical-offset="1887">
+              <caret line="84" column="55" selection-start-line="84" selection-start-column="55" selection-end-line="84" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#503#521#0" expanded="false" />
                 <element signature="method#DataHandler#0;class#DataHandler#0" expanded="false" />
-                <element signature="e#1365#1366#0" expanded="true" />
-                <element signature="e#1393#1394#0" expanded="true" />
+                <element signature="e#1366#1367#0" expanded="true" />
+                <element signature="e#1394#1395#0" expanded="true" />
                 <element signature="method#init#0;class#DataHandler#0" expanded="false" />
                 <element signature="method#loadNBTData#0;class#DataHandler#0" expanded="false" />
                 <element signature="method#saveNBTData#0;class#DataHandler#0" expanded="false" />
@@ -92,17 +114,37 @@
       <file leaf-file-name="TickHandlerServer.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/morph/common/core/TickHandlerServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="4169" max-vertical-offset="4845">
-              <caret line="254" column="70" selection-start-line="254" selection-start-column="70" selection-end-line="254" selection-end-column="70" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="3812" max-vertical-offset="4794">
+              <caret line="239" column="60" selection-start-line="239" selection-start-column="54" selection-end-line="239" selection-end-column="64" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1376#1377#0" expanded="true" />
-                <element signature="e#1459#1460#0" expanded="true" />
-                <element signature="e#1505#1506#0" expanded="true" />
-                <element signature="e#1552#1553#0" expanded="true" />
-                <element signature="e#11283#11302#0" expanded="true" />
-                <element signature="e#11382#11413#0" expanded="true" />
+                <element signature="e#588#607#0" expanded="true" />
+                <element signature="e#687#718#0" expanded="true" />
+                <element signature="e#1627#1628#0" expanded="true" />
+                <element signature="e#1710#1711#0" expanded="true" />
+                <element signature="e#1756#1757#0" expanded="true" />
+                <element signature="e#1803#1804#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MorphState.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/morph/common/morph/MorphState.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.40236688" vertical-offset="102" max-vertical-offset="3332">
+              <caret line="34" column="43" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EntityHelper.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/morph/common/core/EntityHelper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="4114">
+              <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -110,8 +152,8 @@
       <file leaf-file-name="SlimsMain.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/morph/common/core/SlimsFix/SlimsMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="2312">
-              <caret line="45" column="70" selection-start-line="45" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1789" max-vertical-offset="2465">
+              <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -120,9 +162,14 @@
       <file leaf-file-name="CommonProxy.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/morph/common/core/CommonProxy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="773" max-vertical-offset="1462">
-              <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="569" max-vertical-offset="1445">
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding>
+                <element signature="e#583#590#0" expanded="false" />
+                <marker date="1407547518273" expanded="true" signature="621:2208" placeholder="{...}" />
+                <marker date="1407547518273" expanded="true" signature="2240:2883" placeholder="{...}" />
+                <marker date="1407547518273" expanded="true" signature="2920:3054" placeholder="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -130,8 +177,8 @@
       <file leaf-file-name="Morph.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/morph/common/Morph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="5036" max-vertical-offset="5712">
-              <caret line="203" column="14" selection-start-line="203" selection-start-column="14" selection-end-line="203" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="174" max-vertical-offset="5151">
+              <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -157,38 +204,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConnectionHandler.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ConnectionHandler.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/morph/common/core/ConnectionHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.34615386" vertical-offset="1041" max-vertical-offset="3213">
-              <caret line="75" column="8" selection-start-line="75" selection-start-column="8" selection-end-line="75" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2826" max-vertical-offset="4216">
+              <caret line="193" column="51" selection-start-line="193" selection-start-column="51" selection-end-line="193" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1223#1224#0" expanded="true" />
                 <element signature="e#1250#1251#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NBTStripper.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/morph/common/morph/mod/NBTStripper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1921">
-              <caret line="28" column="30" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MorphMap.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/morph/common/core/SlimsFix/MorphMap.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -223,14 +248,16 @@
         <option value="$PROJECT_DIR$/morph/common/core/CommandMorph.java" />
         <option value="$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.6.4-9.11.1.964/forge-1.6.4-9.11.1.964-src.jar!/net/minecraft/entity/EntityList.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/src/main/java/morph/common/core/EventHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/morph/common/core/TickHandlerServer.java" />
         <option value="$PROJECT_DIR$/src/main/java/morph/common/morph/mod/NBTStripper.java" />
         <option value="$PROJECT_DIR$/src/main/java/morph/common/ability/mod/AbilitySupport.java" />
-        <option value="$PROJECT_DIR$/src/main/java/morph/common/core/SlimsFix/DataHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/morph/common/core/SlimsFix/SlimsMain.java" />
+        <option value="$PROJECT_DIR$/src/main/java/morph/common/core/EventHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/morph/common/core/SlimsFix/MorphMap.java" />
         <option value="$PROJECT_DIR$/src/main/java/morph/common/Morph.java" />
+        <option value="$PROJECT_DIR$/src/main/java/morph/common/core/SlimsFix/DataHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/morph/common/core/ConnectionHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/morph/common/core/SlimsFix/SlimsMain.java" />
+        <option value="$PROJECT_DIR$/src/main/java/morph/common/morph/MorphState.java" />
       </list>
     </option>
   </component>
@@ -884,7 +911,7 @@
       <created>1407273878784</created>
       <updated>1407273878784</updated>
       <workItem from="1407273879576" duration="57733000" />
-      <workItem from="1407432642122" duration="22017000" />
+      <workItem from="1407432642122" duration="33824000" />
     </task>
     <task id="LOCAL-00001" summary="fixed dat stuff">
       <created>1407393433513</created>
@@ -921,7 +948,7 @@
   </component>
   <component name="TimeTrackingManager">
     <option name="enabled" value="true" />
-    <option name="totallyTimeSpent" value="79750000" />
+    <option name="totallyTimeSpent" value="91557000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="886" extended-state="6" />
@@ -948,7 +975,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JProfiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24677187" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Time Tracking" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287373" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Time Tracking" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32855093" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1018,11 +1045,23 @@
           <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/morph/common/core/EntityHelper.java</url>
+          <line>79</line>
+          <properties />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/morph/common/core/EntityHelper.java</url>
+          <line>29</line>
+          <properties />
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="7" />
+      <option name="time" value="9" />
     </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
@@ -1050,8 +1089,8 @@
             <element signature="imports" expanded="true" />
             <element signature="e#503#521#0" expanded="false" />
             <element signature="method#DataHandler#0;class#DataHandler#0" expanded="false" />
-            <element signature="e#1365#1366#0" expanded="true" />
-            <element signature="e#1393#1394#0" expanded="true" />
+            <element signature="e#1366#1367#0" expanded="true" />
+            <element signature="e#1394#1395#0" expanded="true" />
             <element signature="method#init#0;class#DataHandler#0" expanded="false" />
             <element signature="method#loadNBTData#0;class#DataHandler#0" expanded="false" />
             <element signature="method#saveNBTData#0;class#DataHandler#0" expanded="false" />
@@ -1073,12 +1112,12 @@
           <caret line="357" column="0" selection-start-line="357" selection-start-column="0" selection-end-line="357" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1376#1377#0" expanded="true" />
-            <element signature="e#1459#1460#0" expanded="true" />
-            <element signature="e#1505#1506#0" expanded="true" />
-            <element signature="e#1552#1553#0" expanded="true" />
-            <element signature="e#11283#11302#0" expanded="true" />
-            <element signature="e#11382#11413#0" expanded="true" />
+            <element signature="e#588#607#0" expanded="true" />
+            <element signature="e#687#718#0" expanded="true" />
+            <element signature="e#1627#1628#0" expanded="true" />
+            <element signature="e#1710#1711#0" expanded="true" />
+            <element signature="e#1756#1757#0" expanded="true" />
+            <element signature="e#1803#1804#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1087,7 +1126,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="1836">
           <caret line="37" column="17" selection-start-line="37" selection-start-column="17" selection-end-line="37" selection-end-column="17" />
-          <folding />
+          <folding>
+            <element signature="e#583#590#0" expanded="false" />
+            <marker date="1407547518273" expanded="true" signature="621:2208" placeholder="{...}" />
+            <marker date="1407547518273" expanded="true" signature="2240:2883" placeholder="{...}" />
+            <marker date="1407547518273" expanded="true" signature="2920:3054" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1362,22 +1406,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/morph/common/core/EntityHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="4845">
-          <caret line="44" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/morph/common/core/EventHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="11350" max-vertical-offset="14620">
-          <caret line="740" column="0" selection-start-line="736" selection-start-column="0" selection-end-line="740" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/morph/common/core/ObfHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="3723">
@@ -1412,59 +1440,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/morph/common/core/TickHandlerServer.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/morph/common/core/EventHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4169" max-vertical-offset="4845">
-          <caret line="254" column="70" selection-start-line="254" selection-start-column="70" selection-end-line="254" selection-end-column="70" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1376#1377#0" expanded="true" />
-            <element signature="e#1459#1460#0" expanded="true" />
-            <element signature="e#1505#1506#0" expanded="true" />
-            <element signature="e#1552#1553#0" expanded="true" />
-            <element signature="e#11283#11302#0" expanded="true" />
-            <element signature="e#11382#11413#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/morph/common/core/SlimsFix/DataHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1700">
-          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#503#521#0" expanded="false" />
-            <element signature="method#DataHandler#0;class#DataHandler#0" expanded="false" />
-            <element signature="e#1365#1366#0" expanded="true" />
-            <element signature="e#1393#1394#0" expanded="true" />
-            <element signature="method#init#0;class#DataHandler#0" expanded="false" />
-            <element signature="method#loadNBTData#0;class#DataHandler#0" expanded="false" />
-            <element signature="method#saveNBTData#0;class#DataHandler#0" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="10170" max-vertical-offset="12580">
+          <caret line="630" column="0" selection-start-line="630" selection-start-column="0" selection-end-line="630" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/morph/common/core/SlimsFix/MorphMap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
+          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="method#Start#0;class#MorphMap#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/morph/common/core/CommonProxy.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/morph/common/core/MapPacketHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="773" max-vertical-offset="1462">
-          <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/morph/common/Morph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="5036" max-vertical-offset="5712">
-          <caret line="203" column="14" selection-start-line="203" selection-start-column="14" selection-end-line="203" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2465">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1477,31 +1475,93 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/morph/common/core/MapPacketHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/morph/common/core/CommonProxy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2465">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="569" max-vertical-offset="1445">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="e#583#590#0" expanded="false" />
+            <marker date="1407547518273" expanded="true" signature="621:2208" placeholder="{...}" />
+            <marker date="1407547518273" expanded="true" signature="2240:2883" placeholder="{...}" />
+            <marker date="1407547518273" expanded="true" signature="2920:3054" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/morph/common/Morph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="174" max-vertical-offset="5151">
+          <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/morph/common/core/SlimsFix/SlimsMain.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/morph/common/core/SlimsFix/DataHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="2312">
-          <caret line="45" column="70" selection-start-line="45" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="191" max-vertical-offset="1887">
+          <caret line="84" column="55" selection-start-line="84" selection-start-column="55" selection-end-line="84" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#503#521#0" expanded="false" />
+            <element signature="method#DataHandler#0;class#DataHandler#0" expanded="false" />
+            <element signature="e#1366#1367#0" expanded="true" />
+            <element signature="e#1394#1395#0" expanded="true" />
+            <element signature="method#init#0;class#DataHandler#0" expanded="false" />
+            <element signature="method#loadNBTData#0;class#DataHandler#0" expanded="false" />
+            <element signature="method#saveNBTData#0;class#DataHandler#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/morph/common/core/ConnectionHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34615386" vertical-offset="1041" max-vertical-offset="3213">
-          <caret line="75" column="8" selection-start-line="75" selection-start-column="8" selection-end-line="75" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2826" max-vertical-offset="4216">
+          <caret line="193" column="51" selection-start-line="193" selection-start-column="51" selection-end-line="193" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1223#1224#0" expanded="true" />
             <element signature="e#1250#1251#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/morph/common/core/SlimsFix/SlimsMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1789" max-vertical-offset="2465">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/morph/common/core/EntityHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="4114">
+          <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/morph/common/core/TickHandlerServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3812" max-vertical-offset="4794">
+          <caret line="239" column="60" selection-start-line="239" selection-start-column="54" selection-end-line="239" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#588#607#0" expanded="true" />
+            <element signature="e#687#718#0" expanded="true" />
+            <element signature="e#1627#1628#0" expanded="true" />
+            <element signature="e#1710#1711#0" expanded="true" />
+            <element signature="e#1756#1757#0" expanded="true" />
+            <element signature="e#1803#1804#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/morph/common/morph/MorphState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.40236688" vertical-offset="102" max-vertical-offset="3332">
+          <caret line="34" column="43" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="43" />
+          <folding />
         </state>
       </provider>
     </entry>
