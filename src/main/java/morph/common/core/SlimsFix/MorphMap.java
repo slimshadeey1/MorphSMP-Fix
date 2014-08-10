@@ -10,8 +10,10 @@ import java.util.*;
  */
 public class MorphMap {
     public static HashMap<String, NBTTagCompound> morphMap;
+    public static ArrayList<String> Online = new ArrayList<String>();
 
     public static void Start() {
+        Online.clear();
         FMLServerHandler.instance().getServer().logInfo("Morph Map has been started!");
         morphMap = new HashMap<String, NBTTagCompound>();
         try {
@@ -33,6 +35,7 @@ public class MorphMap {
     }
 
     public static void Stop() {
+        Online.clear();
         FMLServerHandler.instance().getServer().logInfo("Morph Map has been Stopped!");
         try {
             if (morphMap.isEmpty()) {

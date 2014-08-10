@@ -1,9 +1,14 @@
 package morph.common.core.SlimsFix;
 
+import cpw.mods.fml.common.network.*;
 import cpw.mods.fml.server.*;
 import morph.common.*;
+import morph.common.core.*;
+import morph.common.morph.*;
 import net.minecraft.entity.player.*;
 import net.minecraft.nbt.*;
+
+import java.util.*;
 
 
 /**
@@ -23,58 +28,82 @@ public class SlimsMain {
     */
 
     public static void onRespawn(EntityPlayer player) {
+        Boolean onLogin = false;
+        Boolean onRespawn = false;
+        if (MorphMap.Online.isEmpty() || !MorphMap.Online.isEmpty() && !MorphMap.Online.contains(player.username)) {
+            onLogin = true;
+            MorphMap.Online.add(player.username);
+        } else if (!MorphMap.Online.isEmpty()) {
+            onRespawn = true;
+        }
+
         try {
             FMLServerHandler.instance().getServer().logInfo("Player: " + player.username + " Starting MorphData!");
             DataHandler respawn = new DataHandler();
             respawn.register(player, respawn);
             FMLServerHandler.instance().getServer().logInfo("Player: " + player.username + " MorphData registered!");
-            Boolean morphNew = false;
-            try {
-                if (MorphMap.morphMap.containsKey(player.username))
-                    morphNew = true;
-            } catch (Exception e) {
 
-            }
-            if (morphNew) {
-                try {
-                    respawn.setMorphData(MorphMap.morphMap.get(player.username));
-                } catch (Exception e) {
-                    FMLServerHandler.instance().getServer().logInfo("Player: " + player.username + " Morph data was no able to be copied from the map!");
-                }
-            } else {
-                FMLServerHandler.instance().getServer().logInfo("Player: " + player.username + " has to get new Morph data!");
-                try {
-                    NBTTagCompound morphData;
-                    if (respawn.getHasMD()) {
-                        morphData = respawn.getMorphData();
-                    } else {
-                        morphData = respawn.getNewMorphData();
+            //--------------------------------------------------------------------------------------------------------------
+
+            if (onLogin) {
+                ArrayList list = Morph.proxy.tickHandlerServer.getPlayerMorphs(player.worldObj, player.username);
+
+                if (MorphMap.morphMap.get(player.username) != null) {
+                    NBTTagCompound tag = MorphMap.morphMap.get(player.username);///TODO Here we have the morph save and load
+
+                    MorphHandler.addOrGetMorphState(list, new MorphState(player.worldObj, player.username, player.username, null, player.worldObj.isRemote));
+
+                    int count = tag.getInteger(player.username + "_morphStatesCount");
+                    if (count > 0) {
+
+                        for (int i = 0; i < count; i++) {
+                            MorphState state = new MorphState(player.worldObj, player.username, player.username, null, false);
+                            state.readTag(player.worldObj, tag.getCompoundTag(player.username + "_morphState" + i));
+                            if (!state.identifier.equalsIgnoreCase("")) {
+                                MorphHandler.addOrGetMorphState(list, state);
+                            }
+                        }
                     }
-                    MorphMap.morphMap.put(player.username, morphData);
 
-                    Morph.proxy.tickHandlerServer.updateSession(player);
+                    NBTTagCompound tag1 = tag.getCompoundTag(player.username + "_morphData");
+                    if (tag1.hasKey("playerName")) {
+                        MorphInfo info = new MorphInfo();
+                        info.readNBT(tag1);
+                        if (!info.nextState.playerName.equals(info.nextState.playerMorph)) {
+                            Morph.proxy.tickHandlerServer.playerMorphInfo.put(info.playerName, info);
+                            MorphHandler.addOrGetMorphState(list, info.nextState);
 
-                } catch (Exception n) {
-                    FMLServerHandler.instance().getServer().logInfo("Player: " + player.username + " Error in loading new Morph Data in map! SHIT");
-                    FMLServerHandler.instance().getServer().logInfo("Player: " + player.username + " Error in MorphMap data loading is" + n.getMessage());
-                    n.getCause().printStackTrace();
+                            PacketDispatcher.sendPacketToAllPlayers(info.getMorphInfoAsPacket());
+                        }
+                    }
+                }
+
+                MorphHandler.updatePlayerOfMorphStates((EntityPlayerMP) player, null, true);
+                for (Map.Entry<String, MorphInfo> e : Morph.proxy.tickHandlerServer.playerMorphInfo.entrySet()) {
+                    if (e.getKey().equalsIgnoreCase(player.username)) {
+                        continue;
+                    }
+                    PacketDispatcher.sendPacketToPlayer(e.getValue().getMorphInfoAsPacket(), (Player) player);
+                }
+
+                MorphInfo info = Morph.proxy.tickHandlerServer.playerMorphInfo.get(player.username);
+
+                if (info != null) {
+                    ObfHelper.forceSetSize(player, info.nextState.entInstance.width, info.nextState.entInstance.height);
+                    player.setPosition(player.posX, player.posY, player.posZ);
+                    player.eyeHeight = info.nextState.entInstance instanceof EntityPlayer ? ((EntityPlayer) info.nextState.entInstance).username.equalsIgnoreCase(player.username) ? player.getDefaultEyeHeight() : ((EntityPlayer) info.nextState.entInstance).getDefaultEyeHeight() : info.nextState.entInstance.getEyeHeight() - player.yOffset;
                 }
             }
-            Boolean mapCheck = false;
-            try {
-                if (MorphMap.morphMap.containsKey(player.username))
-                    mapCheck = true;
-            } catch (Exception e) {
+            if (onRespawn) {
+                MorphInfo info = Morph.proxy.tickHandlerServer.playerMorphInfo.get(player.username);
+
+                if (info != null) {
+                    ObfHelper.forceSetSize(player, info.nextState.entInstance.width, info.nextState.entInstance.height);
+                    player.setPosition(player.posX, player.posY, player.posZ);
+                    player.eyeHeight = info.nextState.entInstance instanceof EntityPlayer ? ((EntityPlayer) info.nextState.entInstance).username.equalsIgnoreCase(player.username) ? player.getDefaultEyeHeight() : ((EntityPlayer) info.nextState.entInstance).getDefaultEyeHeight() : info.nextState.entInstance.getEyeHeight() - player.yOffset;
+                }
             }
-            if (mapCheck) {
-                FMLServerHandler.instance().getServer().logInfo("Player: " + player.username + " is in the map! Data: " + MorphMap.morphMap.get(player.username).toString());
-            } else {
-                FMLServerHandler.instance().getServer().logInfo("Player: " + player.username + " is not in the map!");
-            }
-            FMLServerHandler.instance().getServer().getConfigurationManager().saveAllPlayerData();
-            FMLServerHandler.instance().getServer().logInfo("Player: " + player.username + " On Respawn succesful!");
         } catch (Exception e) {
-            FMLServerHandler.instance().getServer().logWarning("Player: " + player.username + " On Respawn failed! :O");
         }
     }
 
@@ -89,12 +118,12 @@ public class SlimsMain {
 
     public static void onLogout(EntityPlayer player) {
         try {
+            MorphMap.Online.remove(player.username);
             FMLServerHandler.instance().getServer().logInfo("Player: " + player.username + " Logout Player save morph started!");
             DataHandler logout = new DataHandler();
             logout.register(player, logout);
             try {
-                logout.setMorphData(MorphMap.morphMap.get(player.username));
-                FMLServerHandler.instance().getServer().getConfigurationManager().saveAllPlayerData();
+                logout.setMorphData();
                 FMLServerHandler.instance().getServer().logInfo("Player: " + player.username + " Logout Player save morph successful!");
             } catch (Exception e) {
             }
@@ -110,7 +139,7 @@ public class SlimsMain {
                     FMLServerHandler.instance().getServer().logInfo("Player: " + s + " Work save Morphs started");
                     DataHandler stop = new DataHandler();
                     stop.register(FMLServerHandler.instance().getServer().getConfigurationManager().getPlayerForUsername(s), stop);
-                    stop.setMorphData(MorphMap.morphMap.get(s));
+                    stop.setMorphData();
                     FMLServerHandler.instance().getServer().logInfo("Player: " + s + " Work save Morphs has been successful!");
                 } catch (Exception e) {
                     FMLServerHandler.instance().getServer().logWarning("Player: " + s + " Work save Morphs failed!");
@@ -118,7 +147,6 @@ public class SlimsMain {
             }
         } catch (Exception e) {
         }
-        FMLServerHandler.instance().getServer().getConfigurationManager().saveAllPlayerData();
         MorphMap.Stop();
     }
 
@@ -129,7 +157,7 @@ public class SlimsMain {
                     FMLServerHandler.instance().getServer().logInfo("Player: " + s + " World save started morph!");
                     DataHandler save = new DataHandler();
                     save.register(FMLServerHandler.instance().getServer().getConfigurationManager().getPlayerForUsername(s), save);
-                    save.setMorphData(MorphMap.morphMap.get(s));
+                    save.setMorphData();
                     FMLServerHandler.instance().getServer().logInfo("Player: " + s + " World save morphs successful!");
                 } catch (Exception e) {
                     FMLServerHandler.instance().getServer().logWarning("Player: " + s + " World save morphs failed!");
@@ -137,6 +165,5 @@ public class SlimsMain {
             }
         } catch (Exception e) {
         }
-        FMLServerHandler.instance().getServer().getConfigurationManager().saveAllPlayerData();
     }
 }

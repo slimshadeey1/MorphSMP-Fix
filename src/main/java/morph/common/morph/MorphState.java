@@ -2,6 +2,7 @@ package morph.common.morph;
 
 import cpw.mods.fml.common.*;
 import cpw.mods.fml.relauncher.*;
+import cpw.mods.fml.server.*;
 import morph.common.core.*;
 import morph.common.morph.mod.*;
 import net.minecraft.client.entity.*;
@@ -114,6 +115,7 @@ public class MorphState
 
         boolean invalid = false;
         if (playerName.equalsIgnoreCase("") || playerMorph.equalsIgnoreCase("") && tag1.getString("id").equalsIgnoreCase("")) {
+            FMLServerHandler.instance().getServer().logInfo("The tag in MorphState is empty!");
             invalid = true;
         }
 
