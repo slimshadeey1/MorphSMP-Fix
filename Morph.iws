@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ac2a2799-e2c8-4d31-bf64-bdeecaadb646" name="Default" comment="Morphs Work, though there are a few bugs to handle... YEA BRO">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/morph/common/core/ConnectionHandler.java" afterPath="$PROJECT_DIR$/src/main/java/morph/common/core/ConnectionHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/morph/common/core/SlimsFix/DataHandler.java" afterPath="$PROJECT_DIR$/src/main/java/morph/common/core/SlimsFix/DataHandler.java" />
+    <list default="true" id="ac2a2799-e2c8-4d31-bf64-bdeecaadb646" name="Default" comment="Alot of fixes, alot of bugs :)">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Morph.iws" afterPath="$PROJECT_DIR$/Morph.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/morph/common/core/SlimsFix/MorphMap.java" afterPath="$PROJECT_DIR$/src/main/java/morph/common/core/SlimsFix/MorphMap.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/morph/common/morph/MorphState.java" afterPath="$PROJECT_DIR$/src/main/java/morph/common/morph/MorphState.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/morph/common/core/SlimsFix/SlimsMain.java" afterPath="$PROJECT_DIR$/src/main/java/morph/common/core/SlimsFix/SlimsMain.java" />
     </list>
     <ignored path="Morph.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -170,7 +165,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/morph/common/core/SlimsFix/SlimsMain.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="565" max-vertical-offset="1649">
-              <caret line="141" column="41" selection-start-line="141" selection-start-column="41" selection-end-line="141" selection-end-column="41" />
+              <caret line="142" column="41" selection-start-line="142" selection-start-column="41" selection-end-line="142" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#onRespawn#0;class#SlimsMain#0" expanded="false" />
@@ -183,10 +178,11 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/morph/common/core/ConnectionHandler.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2805">
-              <caret line="167" column="9" selection-start-line="167" selection-start-column="9" selection-end-line="167" selection-end-column="9" />
+              <caret line="165" column="9" selection-start-line="165" selection-start-column="9" selection-end-line="165" selection-end-column="9" />
               <folding>
-                <element signature="e#7443#7444#0" expanded="true" />
-                <element signature="e#7486#7487#0" expanded="true" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#7389#7390#0" expanded="true" />
+                <element signature="e#7432#7433#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -230,8 +226,8 @@
         <option value="$PROJECT_DIR$/src/main/java/morph/common/morph/MorphState.java" />
         <option value="$PROJECT_DIR$/src/main/java/morph/common/core/ConnectionHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/morph/common/core/SlimsFix/MorphMap.java" />
-        <option value="$PROJECT_DIR$/src/main/java/morph/common/core/SlimsFix/DataHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/morph/common/core/SlimsFix/SlimsMain.java" />
+        <option value="$PROJECT_DIR$/src/main/java/morph/common/core/SlimsFix/DataHandler.java" />
       </list>
     </option>
   </component>
@@ -785,7 +781,7 @@
       <workItem from="1407273879576" duration="57733000" />
       <workItem from="1407432642122" duration="35142000" />
       <workItem from="1407568459539" duration="611000" />
-      <workItem from="1407603866304" duration="22234000" />
+      <workItem from="1407603866304" duration="22253000" />
     </task>
     <task id="LOCAL-00001" summary="fixed dat stuff">
       <created>1407393433513</created>
@@ -799,7 +795,11 @@
       <created>1407564101538</created>
       <updated>1407564101538</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Alot of fixes, alot of bugs :)">
+      <created>1407632362291</created>
+      <updated>1407632362291</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers>
       <Trello shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -826,7 +826,7 @@
   </component>
   <component name="TimeTrackingManager">
     <option name="enabled" value="true" />
-    <option name="totallyTimeSpent" value="115720000" />
+    <option name="totallyTimeSpent" value="115739000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="886" extended-state="6" />
@@ -846,6 +846,7 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329235" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24892396" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32946298" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -858,7 +859,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329235" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -910,7 +910,8 @@
     <MESSAGE value="fixed dat stuff" />
     <MESSAGE value="I have done alot of work today, THE MAIN BUG is loading data that is not null into the map." />
     <MESSAGE value="Morphs Work, though there are a few bugs to handle... YEA BRO" />
-    <option name="LAST_COMMIT_MESSAGE" value="Morphs Work, though there are a few bugs to handle... YEA BRO" />
+    <MESSAGE value="Alot of fixes, alot of bugs :)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Alot of fixes, alot of bugs :)" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
@@ -977,8 +978,9 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="3281" max-vertical-offset="4216">
           <caret line="193" column="51" selection-start-line="193" selection-start-column="51" selection-end-line="193" selection-end-column="51" />
           <folding>
-            <element signature="e#7443#7444#0" expanded="true" />
-            <element signature="e#7486#7487#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#7389#7390#0" expanded="true" />
+            <element signature="e#7432#7433#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1072,8 +1074,9 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="3281" max-vertical-offset="4216">
           <caret line="193" column="51" selection-start-line="193" selection-start-column="51" selection-end-line="193" selection-end-column="51" />
           <folding>
-            <element signature="e#7443#7444#0" expanded="true" />
-            <element signature="e#7486#7487#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#7389#7390#0" expanded="true" />
+            <element signature="e#7432#7433#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1470,10 +1473,11 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/morph/common/core/ConnectionHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2805">
-          <caret line="167" column="9" selection-start-line="167" selection-start-column="9" selection-end-line="167" selection-end-column="9" />
+          <caret line="165" column="9" selection-start-line="165" selection-start-column="9" selection-end-line="165" selection-end-column="9" />
           <folding>
-            <element signature="e#7443#7444#0" expanded="true" />
-            <element signature="e#7486#7487#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#7389#7390#0" expanded="true" />
+            <element signature="e#7432#7433#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1523,7 +1527,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/morph/common/core/SlimsFix/SlimsMain.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="565" max-vertical-offset="1649">
-          <caret line="141" column="41" selection-start-line="141" selection-start-column="41" selection-end-line="141" selection-end-column="41" />
+          <caret line="142" column="41" selection-start-line="142" selection-start-column="41" selection-end-line="142" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#onRespawn#0;class#SlimsMain#0" expanded="false" />
