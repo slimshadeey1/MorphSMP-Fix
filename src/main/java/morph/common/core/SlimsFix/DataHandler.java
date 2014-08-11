@@ -127,7 +127,6 @@ public class DataHandler extends Thread implements IExtendedEntityProperties {
         return MorphData;
     }
 
-    @Deprecated
     private synchronized void loadSavedData() {
         loadNBTData(PlayerE.getEntityData());
         EntityPlayer player = PlayerE;
