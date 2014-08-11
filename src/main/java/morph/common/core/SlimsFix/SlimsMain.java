@@ -1,6 +1,5 @@
 package morph.common.core.SlimsFix;
 
-import cpw.mods.fml.common.network.*;
 import cpw.mods.fml.server.*;
 import morph.common.*;
 import morph.common.core.*;
@@ -44,32 +43,12 @@ public class SlimsMain {
             FMLServerHandler.instance().getServer().logInfo("Player: " + player.username + " MorphData registered!");
 
             //--------------------------------------------------------------------------------------------------------------
+            MorphInfo info = Morph.proxy.tickHandlerServer.playerMorphInfo.get(player.username);
 
-            if (onLogin) {
-                MorphHandler.updatePlayerOfMorphStates((EntityPlayerMP) player, null, true);
-                for (Map.Entry<String, MorphInfo> e : Morph.proxy.tickHandlerServer.playerMorphInfo.entrySet()) {
-                    if (e.getKey().equalsIgnoreCase(player.username)) {
-                        continue;
-                    }
-                    PacketDispatcher.sendPacketToPlayer(e.getValue().getMorphInfoAsPacket(), (Player) player);
-                }
-
-                MorphInfo info = Morph.proxy.tickHandlerServer.playerMorphInfo.get(player.username);
-
-                if (info != null) {
-                    ObfHelper.forceSetSize(player, info.nextState.entInstance.width, info.nextState.entInstance.height);
-                    player.setPosition(player.posX, player.posY, player.posZ);
-                    player.eyeHeight = info.nextState.entInstance instanceof EntityPlayer ? ((EntityPlayer) info.nextState.entInstance).username.equalsIgnoreCase(player.username) ? player.getDefaultEyeHeight() : ((EntityPlayer) info.nextState.entInstance).getDefaultEyeHeight() : info.nextState.entInstance.getEyeHeight() - player.yOffset;
-                }
-            }
-            if (onRespawn) {
-                MorphInfo info = Morph.proxy.tickHandlerServer.playerMorphInfo.get(player.username);
-
-                if (info != null) {
-                    ObfHelper.forceSetSize(player, info.nextState.entInstance.width, info.nextState.entInstance.height);
-                    player.setPosition(player.posX, player.posY, player.posZ);
-                    player.eyeHeight = info.nextState.entInstance instanceof EntityPlayer ? ((EntityPlayer) info.nextState.entInstance).username.equalsIgnoreCase(player.username) ? player.getDefaultEyeHeight() : ((EntityPlayer) info.nextState.entInstance).getDefaultEyeHeight() : info.nextState.entInstance.getEyeHeight() - player.yOffset;
-                }
+            if (info != null) {
+                ObfHelper.forceSetSize(player, info.nextState.entInstance.width, info.nextState.entInstance.height);
+                player.setPosition(player.posX, player.posY, player.posZ);
+                player.eyeHeight = info.nextState.entInstance instanceof EntityPlayer ? ((EntityPlayer) info.nextState.entInstance).username.equalsIgnoreCase(player.username) ? player.getDefaultEyeHeight() : ((EntityPlayer) info.nextState.entInstance).getDefaultEyeHeight() : info.nextState.entInstance.getEyeHeight() - player.yOffset;
             }
         } catch (Exception e) {
         }

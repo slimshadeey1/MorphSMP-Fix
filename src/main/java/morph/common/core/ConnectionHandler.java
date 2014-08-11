@@ -61,6 +61,7 @@ public class ConnectionHandler
 
     @Override
     public void onPlayerLogin(EntityPlayer player) {
+        SlimsMain.onRespawn(player);
        /* Boolean morphReady = false;
         try {
             if (MorphMap.morphMap.get(player.username) != null)
