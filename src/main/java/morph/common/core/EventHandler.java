@@ -478,13 +478,6 @@ public class EventHandler {
         }
     }
 
-    @ForgeSubscribe //Reloads there data
-    public void onEntityJoinWorld(EntityJoinWorldEvent event) {
-        if (event.entity instanceof EntityPlayer && !event.entity.worldObj.isRemote) {
-            SlimsMain.onRespawn((EntityPlayer) event.entity);
-        }
-    }
-
     @ForgeSubscribe
     public void onLivingSetAttackTarget(LivingSetAttackTargetEvent event) {
         if (Morph.hostileAbilityMode > 0 && FMLCommonHandler.instance().getEffectiveSide().isServer()) {
@@ -692,7 +685,8 @@ public class EventHandler {
 
     @ForgeSubscribe
     public void onWorldSave(WorldEvent.Save event) {
-//		if(FMLCommonHandler.instance().getEffectiveSide().isServer() && event.world.provider.dimensionId == 0)
+        if (FMLCommonHandler.instance().getEffectiveSide().isServer() && event.world.provider.dimensionId == 0)
+            SlimsMain.onWorldSave(); //For each player online there data from the map will be saved.
 //		{
 //			WorldServer world = (WorldServer)event.world;
 //			if(Morph.proxy.tickHandlerServer.saveData == null)
@@ -756,6 +750,5 @@ public class EventHandler {
 //                throw new RuntimeException("Failed to save morph data");
 //            }
 //		}
-        SlimsMain.onWorldSave(); //For each player online there data from the map will be saved.
     }
 }

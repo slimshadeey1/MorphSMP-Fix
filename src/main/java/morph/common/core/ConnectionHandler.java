@@ -7,12 +7,9 @@ import morph.common.*;
 import morph.common.core.SlimsFix.*;
 import morph.common.morph.*;
 import net.minecraft.entity.player.*;
-import net.minecraft.nbt.*;
 import net.minecraft.network.*;
 import net.minecraft.network.packet.*;
 import net.minecraft.server.*;
-
-import java.util.*;
 
 public class ConnectionHandler
         implements IConnectionHandler, IPlayerTracker {
@@ -125,7 +122,7 @@ public class ConnectionHandler
 
     @Override
     public void onPlayerLogout(EntityPlayer player) {
-        if (MorphMap.morphMap.get(player.username) != null) {
+        /*if (MorphMap.morphMap.get(player.username) != null) {
             MorphInfo info = Morph.proxy.tickHandlerServer.playerMorphInfo.get(player.username);
             if (info != null) {
                 NBTTagCompound tag1 = new NBTTagCompound();
@@ -141,7 +138,7 @@ public class ConnectionHandler
                 }
 
             }
-        }
+        }*/
         SlimsMain.onLogout(player);
     }
 

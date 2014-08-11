@@ -40,7 +40,7 @@ public class SlimsMain {
         try {
             FMLServerHandler.instance().getServer().logInfo("Player: " + player.username + " Starting MorphData!");
             DataHandler respawn = new DataHandler();
-            respawn.register(player, respawn);
+            respawn.register(player, respawn, false, false);
             FMLServerHandler.instance().getServer().logInfo("Player: " + player.username + " MorphData registered!");
 
             //--------------------------------------------------------------------------------------------------------------
@@ -108,22 +108,32 @@ public class SlimsMain {
     }
 
     public static void onDeathRemove(EntityPlayer player) {
-        try {
-            FMLServerHandler.instance().getServer().logInfo("Player: " + player.username + " On Death Remove of morphs!");
-            MorphMap.morphMap.remove(player.username);
-        } catch (Exception e) {
-            FMLServerHandler.instance().getServer().logWarning("Player: " + player.username + " On Death Remove of morphs has failed! :O");
-        }
     }
 
     public static void onLogout(EntityPlayer player) {
         try {
-            MorphMap.Online.remove(player.username);
             FMLServerHandler.instance().getServer().logInfo("Player: " + player.username + " Logout Player save morph started!");
+            if (MorphMap.morphMap.get(player.username) != null) {
+                MorphInfo info = Morph.proxy.tickHandlerServer.playerMorphInfo.get(player.username);
+                if (info != null) {
+                    NBTTagCompound tag1 = new NBTTagCompound();
+                    info.writeNBT(tag1);
+                    MorphMap.morphMap.get(player.username).setCompoundTag(player.username + "_morphData", tag1);
+                }
+
+                ArrayList<MorphState> states = Morph.proxy.tickHandlerServer.playerMorphs.get(player.username);
+                if (states != null) {
+                    MorphMap.morphMap.get(player.username).setInteger(player.username + "_morphStatesCount", states.size());
+                    for (int i = 0; i < states.size(); i++) {
+                        MorphMap.morphMap.get(player.username).setCompoundTag(player.username + "_morphState" + i, states.get(i).getTag());
+                    }
+
+                }
+            }
+            MorphMap.Online.remove(player.username);
             DataHandler logout = new DataHandler();
-            logout.register(player, logout);
             try {
-                logout.setMorphData();
+                logout.register(player, logout, true, false);
                 FMLServerHandler.instance().getServer().logInfo("Player: " + player.username + " Logout Player save morph successful!");
             } catch (Exception e) {
             }
@@ -138,8 +148,7 @@ public class SlimsMain {
                 try {
                     FMLServerHandler.instance().getServer().logInfo("Player: " + s + " Work save Morphs started");
                     DataHandler stop = new DataHandler();
-                    stop.register(FMLServerHandler.instance().getServer().getConfigurationManager().getPlayerForUsername(s), stop);
-                    stop.setMorphData();
+                    stop.register(FMLServerHandler.instance().getServer().getConfigurationManager().getPlayerForUsername(s), stop, true, false);
                     FMLServerHandler.instance().getServer().logInfo("Player: " + s + " Work save Morphs has been successful!");
                 } catch (Exception e) {
                     FMLServerHandler.instance().getServer().logWarning("Player: " + s + " Work save Morphs failed!");
@@ -156,8 +165,7 @@ public class SlimsMain {
                 try {
                     FMLServerHandler.instance().getServer().logInfo("Player: " + s + " World save started morph!");
                     DataHandler save = new DataHandler();
-                    save.register(FMLServerHandler.instance().getServer().getConfigurationManager().getPlayerForUsername(s), save);
-                    save.setMorphData();
+                    save.register(FMLServerHandler.instance().getServer().getConfigurationManager().getPlayerForUsername(s), save, false, true);
                     FMLServerHandler.instance().getServer().logInfo("Player: " + s + " World save morphs successful!");
                 } catch (Exception e) {
                     FMLServerHandler.instance().getServer().logWarning("Player: " + s + " World save morphs failed!");

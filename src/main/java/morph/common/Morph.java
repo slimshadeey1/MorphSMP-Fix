@@ -32,7 +32,7 @@ import java.util.logging.*;
         versionBounds = "[0.7.0,0.8.0)"
 )
 public class Morph {
-    public static final String version = "0.7.0";
+    public static final String version = "0.7.1";
 
     @Instance("Morph")
     public static Morph instance;
