@@ -16,7 +16,7 @@ import java.util.*;
 /**
  * Created by Ben Byers on 8/5/2014.
  */
-public class DataHandler implements IExtendedEntityProperties {
+public class DataHandler extends Thread implements IExtendedEntityProperties {
     public static final String property = "MorphsModData";
     private EntityPlayer PlayerE;
     private boolean hasMD;
@@ -30,49 +30,26 @@ public class DataHandler implements IExtendedEntityProperties {
     public DataHandler() {
     }
 
-    public final void register(EntityPlayer player, DataHandler dataHandler, Boolean logout, Boolean save) {
+    public synchronized final void register(EntityPlayer player, DataHandler dataHandler, Boolean logout, Boolean save) {
         PlayerE = player;
         hasMD = hasData();
         Boolean mapEmpty;
         Boolean dataEmpty;
         Boolean playerEmpty;
-        NBTTagCompound newData;
-        NBTTagCompound savedData;
-        try {
-            newData = getNewMorphData();
-        } catch (Exception e) {
-            newData = new NBTTagCompound();
-        }
+        NBTTagCompound newData = new NBTTagCompound();
+        NBTTagCompound savedData = MorphData;
 
         try {
-            savedData = getMorphData();
+            dataEmpty = MorphData.hasNoTags();
         } catch (Exception e) {
-            savedData = new NBTTagCompound();
+            dataEmpty = true;
         }
-
         try {
-            mapEmpty = !MorphMap.morphMap.isEmpty();
+            mapEmpty = MorphMap.morphMap.isEmpty();
+            playerEmpty = !mapEmpty && !MorphMap.morphMap.containsKey(player.username);
         } catch (Exception e) {
             mapEmpty = true;
-        }
-
-        try {
-            if (!mapEmpty)
-                playerEmpty = !MorphMap.morphMap.containsKey(PlayerE.username);
-            else
-                playerEmpty = true;
-        } catch (Exception e) {
             playerEmpty = true;
-        }
-
-        try {
-            if (!playerEmpty) {
-                mapData = MorphMap.morphMap.get(PlayerE.username);
-            } else {
-                mapData = null;
-            }
-        } catch (Exception e) {
-            mapData = null;
         }
 
         try {
@@ -81,52 +58,50 @@ public class DataHandler implements IExtendedEntityProperties {
             } else {
                 if (!hasMD) {
                     player.registerExtendedProperties(DataHandler.property, dataHandler);
-                    if (mapEmpty || playerEmpty) {
-                        FMLServerHandler.instance().getServer().logInfo("Morph Player: " + PlayerE.username + " Stage: 4");//<-------- Stage 4 gets new morph data for the map
-                        MorphMap.morphMap.put(PlayerE.username, newData);
-                        loadData();
-                        saveData(PlayerE.username, false);
-                        FMLServerHandler.instance().getServer().logInfo("Morph Player: " + PlayerE.username + " register: 4");
-                    } else if (!playerEmpty) {
+                    if (!playerEmpty) {
                         FMLServerHandler.instance().getServer().logInfo("Morph Player: " + PlayerE.username + " Stage: 3");//<--------
                         saveData(PlayerE.username, false);
                         FMLServerHandler.instance().getServer().logInfo("Morph Player: " + PlayerE.username + " register: 3");
+                    } else {
+                        FMLServerHandler.instance().getServer().logInfo("Morph Player: " + PlayerE.username + " Stage: 4");//<-------- Stage 4 gets new morph data for the map
+                        MorphMap.morphMap.put(PlayerE.username, newData);
+                        loadSavedData();
+                        saveData(PlayerE.username, false);
+                        FMLServerHandler.instance().getServer().logInfo("Morph Player: " + PlayerE.username + " register: 4");
                     }
                 } else {
                     if (!logout) {
-                        try {
-                            dataEmpty = getMorphData() == null;
-                        } catch (Exception e) {
-                            dataEmpty = true;
-                        }
                         if (dataEmpty) {
-                            if (mapEmpty || playerEmpty) {
-                                FMLServerHandler.instance().getServer().logInfo("Morph Player: " + PlayerE.username + " Stage: 1");//<--------
-                                MorphMap.morphMap.put(PlayerE.username, newData);
-                                loadData();
-                                saveData(PlayerE.username, false);
-                                FMLServerHandler.instance().getServer().logInfo("Morph Player: " + PlayerE.username + " register: 1");//<--------
-                            } else if (!playerEmpty) {
+                            if (!playerEmpty) {
                                 FMLServerHandler.instance().getServer().logInfo("Morph Player: " + PlayerE.username + " Stage: 0");//<--------
                                 saveData(PlayerE.username, false);
-                                loadData();
+                                loadSavedData();
                                 FMLServerHandler.instance().getServer().logInfo("Morph Player: " + PlayerE.username + " register: 0");
+
+                            } else {
+                                FMLServerHandler.instance().getServer().logInfo("Morph Player: " + PlayerE.username + " Stage: 1");//<--------
+                                MorphMap.morphMap.put(PlayerE.username, newData);
+                                loadSavedData();
+                                saveData(PlayerE.username, false);
+                                FMLServerHandler.instance().getServer().logInfo("Morph Player: " + PlayerE.username + " register: 1");//<--------
                             }
                         } else {
                             FMLServerHandler.instance().getServer().logInfo("Morph Player: " + PlayerE.username + " Stage: 2");//<--------
                             MorphMap.morphMap.put(PlayerE.username, savedData);
-                            loadData();
+                            loadSavedData();
                             saveData(PlayerE.username, false);
                             FMLServerHandler.instance().getServer().logInfo("Morph Player: " + PlayerE.username + " register: 2");
                         }
                     } else {
-                        if (mapEmpty || playerEmpty) {
-                            FMLServerHandler.instance().getServer().logInfo("Morph Player: " + PlayerE.username + " Stage: 5");//<--------
-                            FMLServerHandler.instance().getServer().logInfo("Morph Player: " + PlayerE.username + " No data and logout, register: 5");
-                        } else if (!playerEmpty) {
+                        if (!playerEmpty) {
                             FMLServerHandler.instance().getServer().logInfo("Morph Player: " + PlayerE.username + " Stage: 6");//<--------
                             saveData(PlayerE.username, true);
                             FMLServerHandler.instance().getServer().logInfo("Morph Player: " + PlayerE.username + " save data and logout, register: 6");
+                            FMLServerHandler.instance().getServer().logInfo("Morph Player: " + PlayerE.username + " Stage: 5");//<--------
+                            FMLServerHandler.instance().getServer().logInfo("Morph Player: " + PlayerE.username + " No data and logout, register: 5");
+                        } else {
+                            FMLServerHandler.instance().getServer().logInfo("Morph Player: " + PlayerE.username + " Stage: 5");//<--------
+                            FMLServerHandler.instance().getServer().logInfo("Morph Player: " + PlayerE.username + " No data and logout, register: 5");
                         }
                     }
                 }
@@ -146,43 +121,20 @@ public class DataHandler implements IExtendedEntityProperties {
         }
     }
 
-    public NBTTagCompound getMorphData() {
-        FMLServerHandler.instance().getServer().logInfo("Player: " + PlayerE.username + " Getting Morph data!");
-        try {
-            loadNBTData(PlayerE.getEntityData());
-            FMLServerHandler.instance().getServer().logInfo("Player: " + PlayerE.username + " Loaded Morph data!");
-        } catch (Exception e) {
-            FMLServerHandler.instance().getServer().logInfo("Player: " + PlayerE.username + " Error loading Morph data! Error: " + e.getMessage());
-        }
+    public synchronized NBTTagCompound getMorphData() {
+        FMLServerHandler.instance().getServer().logInfo("Player: " + PlayerE.username + " Getting saved Morph data!");
+        loadNBTData(PlayerE.getEntityData());
         return MorphData;
     }
 
-    public NBTTagCompound getNewMorphData() {
-        FMLServerHandler.instance().getServer().logInfo("Player: " + PlayerE.username + " Creating new Morph data!");
-        MorphData = new NBTTagCompound();
-        MorphData.setBoolean("HasData", true);
-        try {
-            saveNBTData(PlayerE.getEntityData());
-            FMLServerHandler.instance().getServer().logInfo("Player: " + PlayerE.username + " New Morph data saved 1!");
-            try {
-                loadNBTData(PlayerE.getEntityData());
-                FMLServerHandler.instance().getServer().logInfo("Player: " + PlayerE.username + " New Morph data loaded 2!");
-
-            } catch (Exception e) {
-                FMLServerHandler.instance().getServer().logInfo("Player: " + PlayerE.username + " Error getting saved new Morph data 2x0!");
-            }
-        } catch (Exception e) {
-            FMLServerHandler.instance().getServer().logInfo("Player: " + PlayerE.username + " Error saving new Morph data! 1x0");
-        }
-        return MorphData;
-    }
-
-    private synchronized void loadData() {
+    @Deprecated
+    private synchronized void loadSavedData() {
+        loadNBTData(PlayerE.getEntityData());
         EntityPlayer player = PlayerE;
         ArrayList list = Morph.proxy.tickHandlerServer.getPlayerMorphs(player.worldObj, player.username);
 
-        if (MorphMap.morphMap.get(player.username) != null) {
-            NBTTagCompound tag = MorphMap.morphMap.get(player.username);///TODO Here we have the morph save and load
+        if (MorphData != null) {
+            NBTTagCompound tag = MorphData;///TODO Here we have the morph save and load
 
             MorphHandler.addOrGetMorphState(list, new MorphState(player.worldObj, player.username, player.username, null, player.worldObj.isRemote));
 
@@ -230,10 +182,8 @@ public class DataHandler implements IExtendedEntityProperties {
 
         ArrayList<MorphState> states = Morph.proxy.tickHandlerServer.playerMorphs.get(player);
         tag.setInteger(player + "_morphStatesCount", states.size());
-        if (states != null) {
-            for (int i = 0; i < states.size(); i++) {
-                tag.setCompoundTag(player + "_morphState" + i, states.get(i).getTag());
-            }
+        for (int i = 0; i < states.size(); i++) {
+            tag.setCompoundTag(player + "_morphState" + i, states.get(i).getTag());
         }
         MorphData = MorphMap.morphMap.get(PlayerE.username);
         saveNBTData(PlayerE.getEntityData());
@@ -269,30 +219,35 @@ public class DataHandler implements IExtendedEntityProperties {
 
     @Override
     public void loadNBTData(NBTTagCompound compound) {//Basically This processes the NBT Data and returns what we use.
-        try {
-            MorphData = (NBTTagCompound) compound.getTag(property);
-            FMLServerHandler.instance().getServer().logInfo("Player: " + PlayerE.username + " Data loaded!");
-        } catch (Exception e) {
-            FMLServerHandler.instance().getServer().logWarning("Player: " + PlayerE.username + " Data not loaded, none to load!");
+        synchronized (this) {
+            try {
+                MorphData = (NBTTagCompound) compound.getTag(property);
+                FMLServerHandler.instance().getServer().logInfo("Player: " + PlayerE.username + " Data loaded!");
+            } catch (Exception e) {
+                FMLServerHandler.instance().getServer().logWarning("Player: " + PlayerE.username + " Data not loaded, none to load!");
+                MorphData = new NBTTagCompound();
+            }
+            //data.setByteArray("HatDat",dat); If I see performance issues I will write everything to UTF then save it as a byte array
         }
-        //data.setByteArray("HatDat",dat); If I see performance issues I will write everything to UTF then save it as a byte array
     }
 
     @Override
     public void saveNBTData(NBTTagCompound compound) {
-        NBTTagCompound data;
-        if (MorphData != null) {
-            try {
-                data = MorphData;
-                //data.setByteArray("MDat",dat); If I see performance issues I will write everything to UTF then save it as a byte array
-                //For each field needed, just add here and above where they are initialized.
-                compound.setTag(property, data);
-                FMLServerHandler.instance().getServer().logInfo("Player: " + PlayerE.username + " Data saved!");
-            } catch (Exception e) {
-                FMLServerHandler.instance().getServer().logInfo("Player: " + PlayerE.username + " Had an error saving data!");
+        synchronized (this) {
+            NBTTagCompound data;
+            if (MorphData != null) {
+                try {
+                    data = MorphData;
+                    //data.setByteArray("MDat",dat); If I see performance issues I will write everything to UTF then save it as a byte array
+                    //For each field needed, just add here and above where they are initialized.
+                    compound.setTag(property, data);
+                    FMLServerHandler.instance().getServer().logInfo("Player: " + PlayerE.username + " Data saved!");
+                } catch (Exception e) {
+                    FMLServerHandler.instance().getServer().logInfo("Player: " + PlayerE.username + " Had an error saving data!");
+                }
+            } else {
+                FMLServerHandler.instance().getServer().logWarning("Player: " + PlayerE.username + " Data not saved, none to save!");
             }
-        } else {
-            FMLServerHandler.instance().getServer().logWarning("Player: " + PlayerE.username + " Data not saved, none to save!");
         }
     }
 }

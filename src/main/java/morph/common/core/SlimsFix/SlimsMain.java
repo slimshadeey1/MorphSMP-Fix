@@ -27,15 +27,6 @@ public class SlimsMain {
     */
 
     public static void onRespawn(EntityPlayer player) {
-        Boolean onLogin = false;
-        Boolean onRespawn = false;
-        if (MorphMap.Online.isEmpty() || !MorphMap.Online.isEmpty() && !MorphMap.Online.contains(player.username)) {
-            onLogin = true;
-            MorphMap.Online.add(player.username);
-        } else if (!MorphMap.Online.isEmpty()) {
-            onRespawn = true;
-        }
-
         try {
             FMLServerHandler.instance().getServer().logInfo("Player: " + player.username + " Starting MorphData!");
             DataHandler respawn = new DataHandler();
@@ -77,7 +68,6 @@ public class SlimsMain {
 
                 }
             }
-            MorphMap.Online.remove(player.username);
             DataHandler logout = new DataHandler();
             try {
                 logout.register(player, logout, true, false);

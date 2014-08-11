@@ -2,6 +2,7 @@ package morph.common.core;
 
 import cpw.mods.fml.common.network.*;
 import cpw.mods.fml.relauncher.*;
+import cpw.mods.fml.server.*;
 import morph.api.*;
 import morph.client.entity.*;
 import morph.client.morph.*;
@@ -39,7 +40,7 @@ public class MapPacketHandler
                     boolean delete = stream.readBoolean();
 
                     String identifier = stream.readUTF();
-
+                    FMLServerHandler.instance().getServer().logInfo("Player: " + player.username + " Morph player ID: "+identifier);
                     MorphInfo info = Morph.proxy.tickHandlerServer.playerMorphInfo.get(player.username);
                     if (info != null && info.getMorphing()) {
                         break;
@@ -49,6 +50,7 @@ public class MapPacketHandler
 
                     if (state != null) {
                         if (delete) {
+                            FMLServerHandler.instance().getServer().logInfo("Player: " + player.username + " Morph player ID: "+identifier+" Delete morph");
                             if (info != null && info.nextState.identifier.equalsIgnoreCase(state.identifier) || state.playerMorph.equalsIgnoreCase(player.username)) {
                                 break;
                             }
@@ -66,7 +68,7 @@ public class MapPacketHandler
                             if (info3 != null) {
                                 info2.morphAbilities = info3.morphAbilities;
                             }
-
+                            FMLServerHandler.instance().getServer().logInfo("Player: " + player.username + " Morph player ID: "+identifier+" morph old: "+old.toString()+" Morph new: "+info2.toString()+" Info3: "+info3.toString());
                             Morph.proxy.tickHandlerServer.playerMorphInfo.put(player.username, info2);
 
                             PacketDispatcher.sendPacketToAllPlayers(info2.getMorphInfoAsPacket());
@@ -83,9 +85,9 @@ public class MapPacketHandler
                     String identifier = stream.readUTF();
 
                     MorphState state = MorphHandler.getMorphState(player, identifier);
-
                     if (state != null) {
                         state.isFavourite = favourite;
+                        FMLServerHandler.instance().getServer().logInfo("Player: " + player.username + " Morph player ID: "+identifier+" favorite morph state: "+state.toString());
                     }
 
                     break;
