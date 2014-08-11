@@ -11,6 +11,14 @@ ibxm/
 net/
 paulscode/
 assets/forge/
+ui/
+out/
+Etc/
+gradle/
+.gradle/
+build/
+eclipse/
+Logs/
 
 # MC/Forge files #
 deobfuscation_data-*.lzma
