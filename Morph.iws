@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ac2a2799-e2c8-4d31-bf64-bdeecaadb646" name="Default" comment="Works, bugs still there">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/morph/common/core/SlimsFix/DataHandler.java" afterPath="$PROJECT_DIR$/src/main/java/morph/common/core/SlimsFix/DataHandler.java" />
+    <list default="true" id="ac2a2799-e2c8-4d31-bf64-bdeecaadb646" name="Default" comment="Next round of changes, goin into testing">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Morph.iws" afterPath="$PROJECT_DIR$/Morph.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/morph/common/core/SlimsFix/SlimsMain.java" afterPath="$PROJECT_DIR$/src/main/java/morph/common/core/SlimsFix/SlimsMain.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/morph/common/core/TickHandlerServer.java" afterPath="$PROJECT_DIR$/src/main/java/morph/common/core/TickHandlerServer.java" />
     </list>
     <ignored path="Morph.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -78,8 +75,8 @@
       <file leaf-file-name="DataHandler.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/morph/common/core/SlimsFix/DataHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6730769" vertical-offset="1143" max-vertical-offset="3587">
-              <caret line="94" column="100" selection-start-line="94" selection-start-column="100" selection-end-line="94" selection-end-column="100" />
+            <state vertical-scroll-proportion="0.5724852" vertical-offset="1143" max-vertical-offset="3587">
+              <caret line="90" column="39" selection-start-line="90" selection-start-column="39" selection-end-line="90" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#hasData#0;class#DataHandler#0" expanded="false" />
@@ -801,7 +798,7 @@
       <workItem from="1407273879576" duration="57733000" />
       <workItem from="1407432642122" duration="35142000" />
       <workItem from="1407568459539" duration="611000" />
-      <workItem from="1407603866304" duration="38500000" />
+      <workItem from="1407603866304" duration="38528000" />
     </task>
     <task id="LOCAL-00001" summary="fixed dat stuff">
       <created>1407393433513</created>
@@ -823,7 +820,11 @@
       <created>1407715453624</created>
       <updated>1407715453624</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Next round of changes, goin into testing">
+      <created>1407719743323</created>
+      <updated>1407719743323</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers>
       <Trello shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -850,7 +851,7 @@
   </component>
   <component name="TimeTrackingManager">
     <option name="enabled" value="true" />
-    <option name="totallyTimeSpent" value="131986000" />
+    <option name="totallyTimeSpent" value="132014000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="886" extended-state="6" />
@@ -936,7 +937,8 @@
     <MESSAGE value="Morphs Work, though there are a few bugs to handle... YEA BRO" />
     <MESSAGE value="Alot of fixes, alot of bugs :)" />
     <MESSAGE value="Works, bugs still there" />
-    <option name="LAST_COMMIT_MESSAGE" value="Works, bugs still there" />
+    <MESSAGE value="Next round of changes, goin into testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Next round of changes, goin into testing" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
@@ -1566,8 +1568,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/morph/common/core/SlimsFix/DataHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6730769" vertical-offset="1143" max-vertical-offset="3587">
-          <caret line="94" column="100" selection-start-line="94" selection-start-column="100" selection-end-line="94" selection-end-column="100" />
+        <state vertical-scroll-proportion="0.5724852" vertical-offset="1143" max-vertical-offset="3587">
+          <caret line="90" column="39" selection-start-line="90" selection-start-column="39" selection-end-line="90" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#hasData#0;class#DataHandler#0" expanded="false" />
