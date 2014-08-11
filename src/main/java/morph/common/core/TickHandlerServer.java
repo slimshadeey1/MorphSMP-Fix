@@ -220,6 +220,7 @@ public class TickHandlerServer
     public ArrayList<MorphState> getPlayerMorphs(World world, String name) {
         ArrayList<MorphState> list = playerMorphs.get(name);
         if (list == null) {
+
             list = new ArrayList<MorphState>();
             playerMorphs.put(name, list);
             list.add(0, new MorphState(world, name, name, null, world.isRemote));

@@ -46,38 +46,6 @@ public class SlimsMain {
             //--------------------------------------------------------------------------------------------------------------
 
             if (onLogin) {
-                ArrayList list = Morph.proxy.tickHandlerServer.getPlayerMorphs(player.worldObj, player.username);
-
-                if (MorphMap.morphMap.get(player.username) != null) {
-                    NBTTagCompound tag = MorphMap.morphMap.get(player.username);///TODO Here we have the morph save and load
-
-                    MorphHandler.addOrGetMorphState(list, new MorphState(player.worldObj, player.username, player.username, null, player.worldObj.isRemote));
-
-                    int count = tag.getInteger(player.username + "_morphStatesCount");
-                    if (count > 0) {
-
-                        for (int i = 0; i < count; i++) {
-                            MorphState state = new MorphState(player.worldObj, player.username, player.username, null, false);
-                            state.readTag(player.worldObj, tag.getCompoundTag(player.username + "_morphState" + i));
-                            if (!state.identifier.equalsIgnoreCase("")) {
-                                MorphHandler.addOrGetMorphState(list, state);
-                            }
-                        }
-                    }
-
-                    NBTTagCompound tag1 = tag.getCompoundTag(player.username + "_morphData");
-                    if (tag1.hasKey("playerName")) {
-                        MorphInfo info = new MorphInfo();
-                        info.readNBT(tag1);
-                        if (!info.nextState.playerName.equals(info.nextState.playerMorph)) {
-                            Morph.proxy.tickHandlerServer.playerMorphInfo.put(info.playerName, info);
-                            MorphHandler.addOrGetMorphState(list, info.nextState);
-
-                            PacketDispatcher.sendPacketToAllPlayers(info.getMorphInfoAsPacket());
-                        }
-                    }
-                }
-
                 MorphHandler.updatePlayerOfMorphStates((EntityPlayerMP) player, null, true);
                 for (Map.Entry<String, MorphInfo> e : Morph.proxy.tickHandlerServer.playerMorphInfo.entrySet()) {
                     if (e.getKey().equalsIgnoreCase(player.username)) {
