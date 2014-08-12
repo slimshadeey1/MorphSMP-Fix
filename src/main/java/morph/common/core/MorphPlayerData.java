@@ -1,25 +1,24 @@
 package morph.common.core;
 
-import morph.common.*;
 import net.minecraft.entity.*;
 import net.minecraft.entity.player.*;
 import net.minecraft.nbt.*;
 import net.minecraft.world.*;
 import net.minecraftforge.common.*;
 
-import java.io.*;
-
 /**
  * Created by Ben Byers on 8/12/2014.
  */
-public class MorphPlayerData implements IExtendedEntityProperties{
+public class MorphPlayerData implements IExtendedEntityProperties {
     public final String PROPERTY = "MorphData";
     private final EntityPlayer Player;
     protected NBTTagCompound Data;
-    public MorphPlayerData(EntityPlayer player){
+
+    public MorphPlayerData(EntityPlayer player) {
         Player = player;
     }
-    public void Register(){
+
+    public void Register() {
         Player.registerExtendedProperties(PROPERTY, this);
     }
 
@@ -28,24 +27,24 @@ public class MorphPlayerData implements IExtendedEntityProperties{
 
     }
 
-    public void setData(NBTTagCompound data) {
-        Data = data;
-        saveNBTData(Player.getEntityData());
-    }
-
     public NBTTagCompound getData() {
         loadNBTData(Player.getEntityData());
         return Data;
     }
 
+    public void setData(NBTTagCompound data) {
+        Data = data;
+        saveNBTData(Player.getEntityData());
+    }
+
     @Override
     public void loadNBTData(NBTTagCompound nbtTagCompound) {
-        Data = (NBTTagCompound)nbtTagCompound.getTag(PROPERTY);
+        Data = (NBTTagCompound) nbtTagCompound.getTag(PROPERTY);
     }
 
     @Override
     public void saveNBTData(NBTTagCompound nbtTagCompound) {
-        if(Data != null)
-        nbtTagCompound.setTag(PROPERTY,Data);
+        if (Data != null)
+            nbtTagCompound.setTag(PROPERTY, Data);
     }
 }
