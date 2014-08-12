@@ -1,0 +1,21 @@
+[
+{
+  "modid" : "Morph",
+  "name" : "Morph",
+  "version" : "0.7.1",
+  "url" : "http://ichun.us/mods/morph/",
+  "credits" : "",
+  "authors": [
+    "iChun"
+  ],
+  "description": "Morph mod, made for ModJam 2. Allows players to acquire the morph skill and turn into other mobs.",
+  "logoFile" : "",
+  "updateUrl" : "",
+  "parent" : "",
+  "screenshots": [
+  ],
+  "dependancies": [
+    "Forge"
+  ]
+}
+]

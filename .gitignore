@@ -19,6 +19,7 @@ gradle/
 build/
 eclipse/
 Logs/
+.idea/
 
 # MC/Forge files #
 deobfuscation_data-*.lzma
@@ -30,3 +31,4 @@ forge_logo.png
 mcp.png
 mcpmod.info
 Start.java
+ForgeModLoader-client-0.log.lck
