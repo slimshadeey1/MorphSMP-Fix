@@ -65,34 +65,24 @@ public class ConnectionHandler
     @Override
     public void onPlayerLogin(EntityPlayer player) {
         Morph.proxy.tickHandlerServer.updateSession(player);
-
-        ArrayList list = Morph.proxy.tickHandlerServer.getPlayerMorphs(player.worldObj, player.username);
-
-
-        NBTTagCompound tag = Morph.proxy.tickHandlerServer.saveData(player.username);
-
+        ArrayList<MorphState> list = Morph.proxy.tickHandlerServer.loadSaveData(player.worldObj,player);
+        NBTTagCompound tag = Morph.proxy.tickHandlerServer.saveData(player);
         MorphHandler.addOrGetMorphState(list, new MorphState(player.worldObj, player.username, player.username, null, player.worldObj.isRemote));
-        int count;
-        try {
-            count = tag.getInteger(player.username + "_morphStatesCount");
-        } catch (NullPointerException n) {
-            count = 0;
-        }
-        if (count > 0) {
 
-            for (int i = 0; i < count; i++) {
-                MorphState state = new MorphState(player.worldObj, player.username, player.username, null, false);
-                state.readTag(player.worldObj, tag.getCompoundTag(player.username + "_morphState" + i));
+
+            for (MorphState state:list) {
                 if (!state.identifier.equalsIgnoreCase("")) {
-                    MorphHandler.addOrGetMorphState(list, state);
+                        MorphHandler.addOrGetMorphState(list, state);
                 }
             }
-        }
+
+
         NBTTagCompound tag1;
         try {
             tag1 = tag.getCompoundTag(player.username + "_morphData");
         } catch (NullPointerException n) {
             tag1 = new NBTTagCompound();
+            FMLCommonHandler.instance().getFMLLogger().warning("_MorphData is null!");
         }
         if (tag1.hasKey("playerName")) {
             MorphInfo info = new MorphInfo();
@@ -125,9 +115,11 @@ public class ConnectionHandler
 
     @Override
     public void onPlayerLogout(EntityPlayer player) {
-        if (Morph.proxy.tickHandlerServer.saveData(player.username) != null) {
-            NBTTagCompound tag = Morph.proxy.tickHandlerServer.saveData(player.username);
-            MorphInfo info = Morph.proxy.tickHandlerServer.playerMorphInfo.get(player.username);
+        NBTTagCompound tag;
+        tag = Morph.proxy.tickHandlerServer.saveData(player);
+        if(tag==null)
+            tag = new NBTTagCompound();
+        MorphInfo info = Morph.proxy.tickHandlerServer.playerMorphInfo.get(player.username);
             if (info != null) {
                 NBTTagCompound tag1 = new NBTTagCompound();
                 info.writeNBT(tag1);
@@ -142,10 +134,18 @@ public class ConnectionHandler
                 }
 
             }
+        Integer count;
+        try {
+            count = states.size();
+        }catch(NullPointerException n){
+            count = 99999;
+        }
             Morph.proxy.tickHandlerServer.saveSaveData(tag, player);
+        if(!Morph.proxy.tickHandlerServer.saveData(player).hasNoTags() || Morph.proxy.tickHandlerServer.saveData(player).getInteger(player.username + "_morphStatesCount")==count) {
             Morph.proxy.tickHandlerServer.playerMorphs.remove(player.username);
             Morph.proxy.tickHandlerServer.playerMorphInfo.remove(player.username);
         }
+
     }
 
     @Override

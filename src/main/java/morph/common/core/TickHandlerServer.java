@@ -116,7 +116,7 @@ public class TickHandlerServer
                                 ability.kill();
                             }
                         }
-                        NBTTagCompound tag = saveData(e.getKey());
+                        NBTTagCompound tag = saveData(player);
                         try {
                             tag.removeTag(e.getKey() + "_morphData");
                         } catch (NullPointerException n) {
@@ -280,14 +280,30 @@ public class TickHandlerServer
 
         }
     }
-
-    public NBTTagCompound saveData(String playerName) {
-        EntityPlayer player = cpw.mods.fml.server.FMLServerHandler.instance().getServer().getConfigurationManager().getPlayerForUsername(playerName);
-        if (player != null) {
+    public ArrayList<MorphState> loadSaveData(World world, EntityPlayer player){
+        NBTTagCompound tag = saveData(player);
+        int count = tag.getInteger(player.username + "_morphStatesCount");
+        ArrayList<MorphState> list = new ArrayList<MorphState>();
+        if (count > 0) {
+            for (int i = 0; i < count; i++) {
+                MorphState state = new MorphState(player.worldObj, player.username, player.username, null, false);
+                state.readTag(player.worldObj, tag.getCompoundTag(player.username + "_morphState" + i));
+                list.add(state);
+            }
+        }else {
+            list.add(0, new MorphState(world, player.username, player.username, null, world.isRemote));
+        }
+        playerMorphs.put(player.username,list);
+         return getPlayerMorphs(world,player.username);
+    }
+    public NBTTagCompound saveData(EntityPlayer player) {
             MorphPlayerData data = new MorphPlayerData(player);
             if (player.getExtendedProperties(PROPERTY) != null) {
                 try {
-                    return data.getData();
+                    if(data.getData()!=null)
+                        return data.getData();
+                    else
+                        return new NBTTagCompound();
                 } catch (NullPointerException n) {
                     return new NBTTagCompound();
                 }
@@ -295,18 +311,13 @@ public class TickHandlerServer
                 data.Register();
                 return new NBTTagCompound();
             }
-        } else {
-            return new NBTTagCompound();
-        }
     }
 
     public void saveSaveData(NBTTagCompound tag, EntityPlayer player) {
-        if (player != null) {
             MorphPlayerData data = new MorphPlayerData(player);
             if (player.getExtendedProperties(PROPERTY) == null) {
                 data.Register();
             }
             data.setData(tag);
         }
-    }
 }

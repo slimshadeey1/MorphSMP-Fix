@@ -57,7 +57,7 @@ public class CommandMorph extends CommandBase {
                         icommandsender.sendChatToPlayer(ChatMessageComponent.createFromText(player.username + " is not in morph!"));
                     }
                 } else if (args.length > 2 && args[2].equalsIgnoreCase("true")) {
-                    NBTTagCompound tag = Morph.proxy.tickHandlerServer.saveData(args[1]);
+                    NBTTagCompound tag = Morph.proxy.tickHandlerServer.saveData(player);
                     if (tag.hasKey(args[1] + "_morphData")) {
                         tag.removeTag(args[1] + "_morphData");
 
@@ -115,7 +115,7 @@ public class CommandMorph extends CommandBase {
 
                     notifyAdmins(icommandsender, "Clearing " + args[1] + "'s morphs");
                 } else {
-                    NBTTagCompound tag = Morph.proxy.tickHandlerServer.saveData(args[1]);
+                    NBTTagCompound tag = Morph.proxy.tickHandlerServer.saveData(player);
                     if (tag.hasKey(args[1] + "_morphData")) {
                         tag.removeTag(args[1] + "_morphData");
 

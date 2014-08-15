@@ -14,9 +14,11 @@ import net.minecraft.client.gui.*;
 import net.minecraft.client.gui.inventory.*;
 import net.minecraft.client.renderer.*;
 import net.minecraft.client.renderer.entity.*;
+import net.minecraft.command.*;
 import net.minecraft.entity.*;
 import net.minecraft.entity.player.*;
 import net.minecraft.nbt.*;
+import net.minecraft.server.*;
 import net.minecraft.util.*;
 import net.minecraftforge.client.event.*;
 import net.minecraftforge.client.event.sound.*;
@@ -579,6 +581,9 @@ public class EventHandler {
                     PacketDispatcher.sendPacketToAllPlayers(info2.getMorphInfoAsPacket());
 
                     player.worldObj.playSoundAtEntity(player, "morph:morph", 1.0F, 1.0F);
+
+
+
                 }
             }
             if (event.source.getEntity() instanceof EntityPlayerMP && event.entityLiving != event.source.getEntity()) {
@@ -588,6 +593,7 @@ public class EventHandler {
                     event.entityLiving.setDead();
                 }
             }
+
         }
     }
 
@@ -625,25 +631,40 @@ public class EventHandler {
 
 
             for (Entry<String, MorphInfo> e : Morph.proxy.tickHandlerServer.playerMorphInfo.entrySet()) {
-                NBTTagCompound tag = Morph.proxy.tickHandlerServer.saveData(e.getKey());
-                NBTTagCompound tag1 = new NBTTagCompound();
-                e.getValue().writeNBT(tag1);
-                tag.setCompoundTag(e.getKey() + "_morphData", tag1);
-                Morph.proxy.tickHandlerServer.saveSaveData(tag, FMLServerHandler.instance().getServer().getConfigurationManager().getPlayerForUsername(e.getKey()));
+                EntityPlayer player;
+                player = MinecraftServer.getServer().getConfigurationManager().getPlayerForUsername(e.getKey());
+                NBTTagCompound tag;
+
+                tag = Morph.proxy.tickHandlerServer.saveData(player);
+                    NBTTagCompound tag1 = new NBTTagCompound();
+                    e.getValue().writeNBT(tag1);
+                    tag.setCompoundTag(e.getKey() + "_morphData", tag1);
+                    Morph.proxy.tickHandlerServer.saveSaveData(tag, player);
+
             }
-            for (Entry<String, ArrayList<MorphState>> e : Morph.proxy.tickHandlerServer.playerMorphs.entrySet()) {
-                NBTTagCompound tag = Morph.proxy.tickHandlerServer.saveData(e.getKey());
-                String name = e.getKey();
-                ArrayList<MorphState> states = e.getValue();
-                tag.setInteger(name + "_morphStatesCount", states.size());
-                for (int i = 0; i < states.size(); i++) {
-                    tag.setCompoundTag(name + "_morphState" + i, states.get(i).getTag());
+                for (Entry<String, ArrayList<MorphState>> e : Morph.proxy.tickHandlerServer.playerMorphs.entrySet()) {
+                        EntityPlayer player;
+                            player = MinecraftServer.getServer().getConfigurationManager().getPlayerForUsername(e.getKey());
+                        NBTTagCompound tag;
+
+                            tag = Morph.proxy.tickHandlerServer.saveData(player);
+                        String name = e.getKey();
+                        ArrayList<MorphState> states = e.getValue();
+                        try {
+                            tag.setInteger(name + "_morphStatesCount", states.size());
+                            for (int i = 0; i < states.size(); i++) {
+                                tag.setCompoundTag(name + "_morphState" + i, states.get(i).getTag());
+                            }
+                        }catch(NullPointerException n){
+
+                        }
+                    Morph.proxy.tickHandlerServer.saveSaveData(tag, player);
+
                 }
-                Morph.proxy.tickHandlerServer.saveSaveData(tag, FMLServerHandler.instance().getServer().getConfigurationManager().getPlayerForUsername(e.getKey()));
             }
             //end write data
 
 
-        }
+
     }
 }
