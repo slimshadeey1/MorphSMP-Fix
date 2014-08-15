@@ -64,52 +64,56 @@ public class ConnectionHandler
 
     @Override
     public void onPlayerLogin(EntityPlayer player) {
-        Morph.proxy.tickHandlerServer.updateSession(player);
-        ArrayList<MorphState> list = Morph.proxy.tickHandlerServer.loadSaveData(player.worldObj,player);
-        NBTTagCompound tag = Morph.proxy.tickHandlerServer.saveData(player);
-        MorphHandler.addOrGetMorphState(list, new MorphState(player.worldObj, player.username, player.username, null, player.worldObj.isRemote));
+        {
+            Morph.proxy.tickHandlerServer.updateSession(player);
 
+            ArrayList list = Morph.proxy.tickHandlerServer.getPlayerMorphs(player.worldObj, player.username);
 
-            for (MorphState state:list) {
-                if (!state.identifier.equalsIgnoreCase("")) {
-                        MorphHandler.addOrGetMorphState(list, state);
+            if (Morph.proxy.tickHandlerServer.saveData(player)!=null) {
+                NBTTagCompound tag = Morph.proxy.tickHandlerServer.saveData(player);
+
+                MorphHandler.addOrGetMorphState(list, new MorphState(player.worldObj, player.username, player.username, null, player.worldObj.isRemote));
+
+                int count = tag.getInteger(player.username + "_morphStatesCount");
+                if (count > 0) {
+
+                    for (int i = 0; i < count; i++) {
+                        MorphState state = new MorphState(player.worldObj, player.username, player.username, null, false);
+                        state.readTag(player.worldObj, tag.getCompoundTag(player.username + "_morphState" + i));
+                        if (!state.identifier.equalsIgnoreCase("")) {
+                            MorphHandler.addOrGetMorphState(list, state);
+                        }
+                    }
+                }
+
+                NBTTagCompound tag1 = tag.getCompoundTag(player.username + "_morphData");
+                if (tag1.hasKey("playerName")) {
+                    MorphInfo info = new MorphInfo();
+                    info.readNBT(tag1);
+                    if (!info.nextState.playerName.equals(info.nextState.playerMorph)) {
+                        Morph.proxy.tickHandlerServer.playerMorphInfo.put(info.playerName, info);
+                        MorphHandler.addOrGetMorphState(list, info.nextState);
+
+                        PacketDispatcher.sendPacketToAllPlayers(info.getMorphInfoAsPacket());
+                    }
                 }
             }
 
-
-        NBTTagCompound tag1;
-        try {
-            tag1 = tag.getCompoundTag(player.username + "_morphData");
-        } catch (NullPointerException n) {
-            tag1 = new NBTTagCompound();
-            FMLCommonHandler.instance().getFMLLogger().warning("_MorphData is null!");
-        }
-        if (tag1.hasKey("playerName")) {
-            MorphInfo info = new MorphInfo();
-            info.readNBT(tag1);
-            if (!info.nextState.playerName.equals(info.nextState.playerMorph)) {
-                Morph.proxy.tickHandlerServer.playerMorphInfo.put(info.playerName, info);
-                MorphHandler.addOrGetMorphState(list, info.nextState);
-
-                PacketDispatcher.sendPacketToAllPlayers(info.getMorphInfoAsPacket());
+            MorphHandler.updatePlayerOfMorphStates((EntityPlayerMP) player, null, true);
+            for (Entry<String, MorphInfo> e : Morph.proxy.tickHandlerServer.playerMorphInfo.entrySet()) {
+                if (e.getKey().equalsIgnoreCase(player.username)) {
+                    continue;
+                }
+                PacketDispatcher.sendPacketToPlayer(e.getValue().getMorphInfoAsPacket(), (Player) player);
             }
-        }
 
+            MorphInfo info = Morph.proxy.tickHandlerServer.playerMorphInfo.get(player.username);
 
-        MorphHandler.updatePlayerOfMorphStates((EntityPlayerMP) player, null, true);
-        for (Entry<String, MorphInfo> e : Morph.proxy.tickHandlerServer.playerMorphInfo.entrySet()) {
-            if (e.getKey().equalsIgnoreCase(player.username)) {
-                continue;
+            if (info != null) {
+                ObfHelper.forceSetSize(player, info.nextState.entInstance.width, info.nextState.entInstance.height);
+                player.setPosition(player.posX, player.posY, player.posZ);
+                player.eyeHeight = info.nextState.entInstance instanceof EntityPlayer ? ((EntityPlayer) info.nextState.entInstance).username.equalsIgnoreCase(player.username) ? player.getDefaultEyeHeight() : ((EntityPlayer) info.nextState.entInstance).getDefaultEyeHeight() : info.nextState.entInstance.getEyeHeight() - player.yOffset;
             }
-            PacketDispatcher.sendPacketToPlayer(e.getValue().getMorphInfoAsPacket(), (Player) player);
-        }
-
-        MorphInfo info = Morph.proxy.tickHandlerServer.playerMorphInfo.get(player.username);
-
-        if (info != null) {
-            ObfHelper.forceSetSize(player, info.nextState.entInstance.width, info.nextState.entInstance.height);
-            player.setPosition(player.posX, player.posY, player.posZ);
-            player.eyeHeight = info.nextState.entInstance instanceof EntityPlayer ? ((EntityPlayer) info.nextState.entInstance).username.equalsIgnoreCase(player.username) ? player.getDefaultEyeHeight() : ((EntityPlayer) info.nextState.entInstance).getDefaultEyeHeight() : info.nextState.entInstance.getEyeHeight() - player.yOffset;
         }
     }
 
