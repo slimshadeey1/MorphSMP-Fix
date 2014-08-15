@@ -14,6 +14,7 @@ import net.minecraft.world.*;
 import java.io.*;
 import java.util.*;
 import java.util.Map.*;
+import java.util.logging.*;
 
 public class TickHandlerServer
         implements ITickHandler {
@@ -280,27 +281,28 @@ public class TickHandlerServer
 
         }
     }
-    public ArrayList<MorphState> loadSaveData(World world, EntityPlayer player){
-        NBTTagCompound tag = saveData(player);
-        int count = tag.getInteger(player.username + "_morphStatesCount");
-        ArrayList<MorphState> list = new ArrayList<MorphState>();
-        if (count > 0) {
-            for (int i = 0; i < count; i++) {
-                MorphState state = new MorphState(player.worldObj, player.username, player.username, null, false);
-                state.readTag(player.worldObj, tag.getCompoundTag(player.username + "_morphState" + i));
-                list.add(state);
-            }
-        }else {
-            list.add(0, new MorphState(world, player.username, player.username, null, world.isRemote));
-        }
-        playerMorphs.put(player.username,list);
-         return getPlayerMorphs(world,player.username);
-    }
+//    public ArrayList<MorphState> loadSaveData(World world, EntityPlayer player){
+//        NBTTagCompound tag = saveData(player);
+//        int count = tag.getInteger(player.username + "_morphStatesCount");
+//        ArrayList<MorphState> list = new ArrayList<MorphState>();
+//        if (count > 0) {
+//            for (int i = 0; i < count; i++) {
+//                MorphState state = new MorphState(player.worldObj, player.username, player.username, null, false);
+//                state.readTag(player.worldObj, tag.getCompoundTag(player.username + "_morphState" + i));
+//                list.add(state);
+//            }
+//        }else {
+//            list.add(0, new MorphState(world, player.username, player.username, null, world.isRemote));
+//        }
+//        playerMorphs.put(player.username,list);
+//         return getPlayerMorphs(world,player.username);
+//    }
     public NBTTagCompound saveData(EntityPlayer player) {
+        if(player!=null) {
             MorphPlayerData data = new MorphPlayerData(player);
             if (player.getExtendedProperties(PROPERTY) != null) {
                 try {
-                    if(data.getData()!=null)
+                    if (data.getData() != null)
                         return data.getData();
                     else
                         return new NBTTagCompound();
@@ -309,8 +311,19 @@ public class TickHandlerServer
                 }
             } else {
                 data.Register();
-                return new NBTTagCompound();
+                try {
+                    if (data.getData() != null)
+                        return data.getData();
+                    else
+                        return new NBTTagCompound();
+                } catch (NullPointerException n) {
+                    return new NBTTagCompound();
+                }
             }
+        }else{
+            FMLLog.getLogger().log(Level.SEVERE,"Error recovering player NBT data! Be prepared for null Pointer Exception");
+            return null;
+        }
     }
 
     public void saveSaveData(NBTTagCompound tag, EntityPlayer player) {

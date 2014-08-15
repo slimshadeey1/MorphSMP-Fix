@@ -160,7 +160,9 @@
       <CLASSES>
         <root url="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.6.4-9.11.1.964/forge-1.6.4-9.11.1.964-mcp.jar!/" />
       </CLASSES>
-      <JAVADOC />
+      <JAVADOC>
+        <root url="file://$PROJECT_DIR$/../Forge Minecraft/forge-1.6.4-9.11.1.965-javadoc" />
+      </JAVADOC>
       <SOURCES />
     </library>
     <library name="Gradle: gson-2.2.2">
