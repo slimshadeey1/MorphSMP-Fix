@@ -3,7 +3,6 @@ package morph.common.core;
 import cpw.mods.fml.common.*;
 import cpw.mods.fml.common.network.*;
 import cpw.mods.fml.relauncher.*;
-import cpw.mods.fml.server.*;
 import morph.api.*;
 import morph.client.morph.*;
 import morph.common.*;
@@ -14,7 +13,6 @@ import net.minecraft.client.gui.*;
 import net.minecraft.client.gui.inventory.*;
 import net.minecraft.client.renderer.*;
 import net.minecraft.client.renderer.entity.*;
-import net.minecraft.command.*;
 import net.minecraft.entity.*;
 import net.minecraft.entity.player.*;
 import net.minecraft.nbt.*;
@@ -31,6 +29,7 @@ import org.lwjgl.opengl.*;
 
 import java.util.*;
 import java.util.Map.*;
+import java.util.logging.*;
 
 public class EventHandler {
 
@@ -583,7 +582,6 @@ public class EventHandler {
                     player.worldObj.playSoundAtEntity(player, "morph:morph", 1.0F, 1.0F);
 
 
-
                 }
             }
             if (event.source.getEntity() instanceof EntityPlayerMP && event.entityLiving != event.source.getEntity()) {
@@ -634,36 +632,41 @@ public class EventHandler {
                 EntityPlayer player;
                 player = MinecraftServer.getServer().getConfigurationManager().getPlayerForUsername(e.getKey());
                 NBTTagCompound tag;
-
-                tag = Morph.proxy.tickHandlerServer.saveData(player);
+                try {
+                    tag = Morph.proxy.tickHandlerServer.saveData(player);
                     NBTTagCompound tag1 = new NBTTagCompound();
                     e.getValue().writeNBT(tag1);
                     tag.setCompoundTag(e.getKey() + "_morphData", tag1);
                     Morph.proxy.tickHandlerServer.saveSaveData(tag, player);
 
-            }
-                for (Entry<String, ArrayList<MorphState>> e : Morph.proxy.tickHandlerServer.playerMorphs.entrySet()) {
-                        EntityPlayer player;
-                            player = MinecraftServer.getServer().getConfigurationManager().getPlayerForUsername(e.getKey());
-                        NBTTagCompound tag;
-
-                            tag = Morph.proxy.tickHandlerServer.saveData(player);
-                        String name = e.getKey();
-                        ArrayList<MorphState> states = e.getValue();
-                        try {
-                            tag.setInteger(name + "_morphStatesCount", states.size());
-                            for (int i = 0; i < states.size(); i++) {
-                                tag.setCompoundTag(name + "_morphState" + i, states.get(i).getTag());
-                            }
-                        }catch(NullPointerException n){
-
-                        }
-                    Morph.proxy.tickHandlerServer.saveSaveData(tag, player);
-
+                } catch (NullPointerException n) {
+                    FMLCommonHandler.instance().getFMLLogger().log(Level.WARNING, "Player: " + e.getKey() + "'s Data was not able to be saved!");
                 }
             }
-            //end write data
+            for (Entry<String, ArrayList<MorphState>> e : Morph.proxy.tickHandlerServer.playerMorphs.entrySet()) {
+                EntityPlayer player;
+                player = MinecraftServer.getServer().getConfigurationManager().getPlayerForUsername(e.getKey());
+                NBTTagCompound tag;
+                try {
+                    tag = Morph.proxy.tickHandlerServer.saveData(player);
+                    String name = e.getKey();
+                    ArrayList<MorphState> states = e.getValue();
+                    try {
+                        tag.setInteger(name + "_morphStatesCount", states.size());
+                        for (int i = 0; i < states.size(); i++) {
+                            tag.setCompoundTag(name + "_morphState" + i, states.get(i).getTag());
+                        }
+                    } catch (NullPointerException n) {
 
+                    }
+                    Morph.proxy.tickHandlerServer.saveSaveData(tag, player);
+
+                } catch (NullPointerException n) {
+                    FMLCommonHandler.instance().getFMLLogger().log(Level.WARNING, "Player: " + e.getKey() + "'s States was not able to be saved!");
+                }
+            }
+        }
+        //end write data
 
 
     }
